@@ -1,11 +1,10 @@
 import React from "react";
 import Footer2 from "./sections/Footer2";
 
-import Services1 from "./sections/Services1";
-import Services6 from "./sections/Services6";
-import Intro8 from "./sections/Intro8";
-import Gallery1 from "./sections/Gallery1";
 import CallToAction1 from "./sections/CallToAction1";
+import Gallery1 from "./sections/Gallery1";
+import Intro8 from "./sections/Intro8";
+import Services1 from "./sections/Services1";
 import TopBar11 from "./sections/TopBar11";
 
 const Home = () => {

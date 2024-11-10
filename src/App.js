@@ -23,9 +23,8 @@ import { typographyStyles } from './styles/jss/utilities/_typography';
 import "react-perfect-scrollbar/dist/css/styles.css";
 import GlobalCss from "./styles/jss/GlobalCss";
 
-import MileTracker from "./home/MileTracker";
 import Home from "./home/Home";
-import Contact from "./home/Contact";
+import MileTracker from "./home/MileTracker";
 
 function App() {
   return (

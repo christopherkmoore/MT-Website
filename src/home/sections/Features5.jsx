@@ -1,7 +1,6 @@
-import React from "react";
+import { Grid, Icon, lighten, useMediaQuery } from "@mui/material";
 import { makeStyles } from '@mui/styles';
-import { lighten } from "@mui/material";
-import { Grid, useMediaQuery, Icon, Button } from "@mui/material";
+import React from "react";
 
 const useStyles = makeStyles((theme) => ({
   feature: {

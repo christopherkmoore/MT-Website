@@ -1,7 +1,7 @@
-import React from "react";
-import { Grid, Icon, Button, Avatar } from "@mui/material";
+import { Button, Grid, Icon } from "@mui/material";
 import { makeStyles } from '@mui/styles';
 import clsx from "clsx";
+import React from "react";
 import { NavLink } from "react-router-dom";
 
 
@@ -98,7 +98,7 @@ const Intro8 = () => {
           <Grid item sm={6} xs={12}>
             <h1 className="mt-0 mb-4 font-normal text-48">Christopher Moore</h1>
             <h4 className="text-primary font-normal text-20 m-0">
-              Expert Mobile Developer & Tech Enthusiast.
+              Expert Mobile Developer and Tech Enthusiast.
             </h4>
             <p className="my-8 max-w-400">
               With years of experience in developing innovative mobile apps,

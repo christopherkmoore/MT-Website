@@ -1,10 +1,10 @@
 import React from "react";
 
+import { Fab } from "@mui/material";
 import { makeStyles } from '@mui/styles';
-import { Fab, Icon } from "@mui/material";
 
-import AppleIcon from "../common/icons/TwitterIcon";
 import clsx from "clsx";
+import AppleIcon from "../common/icons/TwitterIcon";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   wrapper: {

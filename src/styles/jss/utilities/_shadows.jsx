@@ -1,5 +1,5 @@
-import React from "react";
 import { GlobalStyles } from "@mui/material";
+import React from "react";
 
 const generateShadows = (theme) => {
   let classList = {};

@@ -2,7 +2,6 @@ import { Icon, IconButton } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { classList, debounce } from "../../utils";
-import ScrollTo from "../common/ScrollTo";
 
 const TopBar11 = (props) => {
   const [isTop, setIsTop] = useState(true);
@@ -22,10 +21,6 @@ const TopBar11 = (props) => {
   };
 
   handleScrollRef = handleScroll();
-
-  const close = () => {
-    setIsClosed(false);
-  };
 
   useEffect(() => {
     if (scrollableElement) {

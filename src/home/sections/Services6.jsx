@@ -1,7 +1,7 @@
-import React from "react";
-import { Grid, Icon } from "@mui/material";
+import { Grid } from "@mui/material";
 import { makeStyles } from '@mui/styles';
 import clsx from "clsx";
+import React from "react";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   card: {

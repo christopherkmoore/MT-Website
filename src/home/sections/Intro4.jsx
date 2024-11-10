@@ -1,6 +1,6 @@
-import React from "react";
+import { Button, Grid } from "@mui/material";
 import { makeStyles } from '@mui/styles';
-import { Grid, Button, Icon } from "@mui/material";
+import React from "react";
 import AppleIcon from "../common/icons/AppleIcon";
 
 const useStyles = makeStyles((theme) => ({

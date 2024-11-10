@@ -1,10 +1,10 @@
-import "swiper/dist/css/swiper.min.css";
+import PropTypes from "prop-types";
 import React, { useEffect } from "react";
 import Swiper from "swiper";
-import PropTypes from "prop-types";
+import "swiper/dist/css/swiper.min.css";
 
+import { NavigateBefore, NavigateNext } from "@mui/icons-material";
 import { Fab } from "@mui/material";
-import { NavigateNext, NavigateBefore } from "@mui/icons-material";
 import { useTheme } from "@mui/system";
 
 import clsx from "clsx";

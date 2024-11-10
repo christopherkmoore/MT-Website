@@ -1,16 +1,13 @@
-import React from "react";
-import { makeStyles } from '@mui/styles';
 import {
-  Icon,
+  darken,
   Grid,
-  Button,
-  TextField,
-  InputAdornment,
+  Icon
 } from "@mui/material";
-import { darken } from "@mui/material";
-import LinkedinIcon from "../common/icons/LinkedinIcon";
-import InstagramIcon from "../common/icons/InstagramIcon";
+import { makeStyles } from '@mui/styles';
 import clsx from "clsx";
+import React from "react";
+import InstagramIcon from "../common/icons/InstagramIcon";
+import LinkedinIcon from "../common/icons/LinkedinIcon";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   section: {
@@ -35,8 +32,6 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     },
   },
 }));
-
-const companyOption = ["About Me", "Services", "Team", "Pricing", "Project"];
 
 const userfulLink = [
   // {

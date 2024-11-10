@@ -18,7 +18,7 @@ const CallToAction2 = () => {
     <section className="section section-cta2 bg-light-gray" id="cta2">
       <div className="container text-center">
         <div className="max-w-770 mx-auto">
-          <h2 className="mb-8">Subscribe & Request a demo</h2>
+          <h2 className="mb-8">Subscribe and Request a demo</h2>
           <TextField
             variant="outlined"
             size="small"
