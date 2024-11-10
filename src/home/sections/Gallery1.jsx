@@ -2,6 +2,8 @@ import React from "react";
 import { Grid, Button } from "@mui/material";
 import { makeStyles } from '@mui/styles';
 import {  lighten } from "@mui/material";
+import { NavLink } from "react-router-dom";
+
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   cardHolder: {
@@ -36,34 +38,19 @@ const Gallery1 = () => {
 
   const imageList = [
     {
-      title: "Firepox",
-      subtitle: "Branding",
-      image: "/assets/images/random-6.png",
+      title: "Tracking",
+      subtitle: "Easy to use Tracking",
+      image: "/assets/images/mt-home-dark-full-1.png",
     },
     {
-      title: "Brillian",
-      subtitle: "Branding",
-      image: "/assets/images/random-7.png",
+      title: "Trends",
+      subtitle: "See real time analytics",
+      image: "/assets/images/mt-trends-dark-full-1.png",
     },
     {
-      title: "Creative",
-      subtitle: "Branding",
-      image: "/assets/images/random-8.png",
-    },
-    {
-      title: "Persistent",
-      subtitle: "Branding",
-      image: "/assets/images/random-9.png",
-    },
-    {
-      title: "Firepox",
-      subtitle: "Branding",
-      image: "/assets/images/random-10.png",
-    },
-    {
-      title: "Creative",
-      subtitle: "Branding",
-      image: "/assets/images/random-5.png",
+      title: "Reports",
+      subtitle: "Make money",
+      image: "/assets/images/mt-reports-dark-full-1.png",
     },
   ];
 
@@ -73,8 +60,8 @@ const Gallery1 = () => {
         <div className="mb-8">
           <h1 className="font-normal text-44 mt-0">My Works And Portfolios</h1>
           <p className="max-w-400 mb-16">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore
+            Here's some of the lastest for what I've been working on --
+            Let's see if we can build something together!
           </p>
         </div>
         <Grid container spacing={3}>
@@ -96,7 +83,7 @@ const Gallery1 = () => {
           variant="contained"
           color="primary"
         >
-          VIEW MORE
+          <NavLink to="/MileTracker">READ MORE</NavLink>
         </Button>
       </div>
     </section>

@@ -83,12 +83,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const features = [
-  "Viewable history for the current week and the week before",
-  "Interactive searching with filters per activity",
-  "Bar graphs show trends over time."
+  "Auto Tracking feature will automatically record when you start driving.",
+  "Search by the different activity type, and see your trips filtered by running, cycling or driving.",
+  "Modify the size to thumbnails or view full-screen sized trip summaries."
 ]
 
-const Feature5 = () => {
+const FeatureTracking = () => {
   const classes = useStyles();
 
   const isMobile = useMediaQuery("(max-width: 768px");
@@ -99,13 +99,31 @@ const Feature5 = () => {
         <Grid container spacing={isMobile ? 3 : 10} alignItems="center">
           <Grid item lg={8} md={8} sm={6} xs={12}>
             <div className="max-w-400 mb-16">
-              <h1 className="mt-0 font-normal text-44">Trends</h1>
+              <h1 className="mt-0 font-normal text-44">Tracking</h1>
               <p>
-                Shows you useful information like when you drive, how often per day, and how far. 
-                Get use trends to know how active you are and what your peak working hours are
+                Start the tracking feature or use the auto-tracking feature to get
+                a snapshot of your movement while you record!
               </p>
             </div>
+
+            <div className="mb-16 inline-block">
+              <div
+                className={`flex flex-wrap items-center border-radius-8 ${classes.buttonGroupBG}`}
+              >
+                <div className="px-6 py-2 box-shadow-none">Walking</div>
+                <div className="px-6 py-2 box-shadow-none">Cycling</div>
+                <div className="px-6 py-2 box-shadow-none">Driving</div>
+              </div>
+            </div>
+
             <div>
+              <h1 className="mt-0 font-normal text-44">
+                Collect Trips
+              </h1>
+              <p className="mb-8 mr-4">
+                Trips can be used to create reports, that show information about a collection of Trips.
+                use Reports to invoice your employer and get paid!
+              </p>
               {features.map((item) => (
                 <div key={item} className="flex items-center">
                   <Icon className="mr-4" color="primary">
@@ -122,7 +140,7 @@ const Feature5 = () => {
             <div className={classes.musicImageWrapper}>
               <img
                 className={classes.musicImage}
-                src="/assets/images/mt-trends-dark-full-1.png"
+                src="/assets/images/mt-home-light-full-1.png"
                 alt="mobile-1"
               />
             </div>
@@ -133,4 +151,4 @@ const Feature5 = () => {
   );
 };
 
-export default Feature5;
+export default FeatureTracking;

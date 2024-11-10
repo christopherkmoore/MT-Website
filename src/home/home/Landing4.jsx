@@ -10,7 +10,7 @@ import Testimonial4 from "./sections/Testimonial4";
 import CallToAction3 from "./sections/CallToAction3";
 import Footer2 from "./sections/Footer2";
 
-const Landing4 = () => {
+const MileTracker = () => {
   useEffect(() => {
     scrollTo("root");
   });
@@ -30,4 +30,4 @@ const Landing4 = () => {
   );
 };
 
-export default Landing4;
+export default MileTracker;

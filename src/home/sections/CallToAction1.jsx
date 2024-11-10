@@ -2,6 +2,7 @@ import React from "react";
 
 import { Grid, Button } from "@mui/material";
 import { makeStyles } from '@mui/styles';
+import { NavLink } from "react-router-dom";
 
 import clsx from "clsx";
 
@@ -27,15 +28,14 @@ const CallToAction1 = ({ bg }) => {
           justify="flex-start"
         >
           <Grid item lg={8} md={8} sm={12} xs={12}>
-            <h2>Dont miss the best management tool of the world</h2>
+            <h2>Let's schedule some time to talk</h2>
             <p className="text-inherit">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nam,
-              illum et quis officiis beatae.
+              Professional discovery, design, and complete technical coverage for your ideas.
             </p>
           </Grid>
           <Grid item lg={4} md={4} sm={12} xs={12} className="text-center">
             <Button size="large" color="secondary" variant="contained">
-              Start 14 days Trial
+              <NavLink className="pl-8 pr-7" to="/Contact">Contact me</NavLink>
             </Button>
           </Grid>
         </Grid>

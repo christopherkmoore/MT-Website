@@ -22,19 +22,35 @@ const Service6 = () => {
 
   const cardList = [
     {
-      icon: "account_balance",
+      image: "/assets/images/previous-work-1.png",
+      text: "Slalom Build",
+    },
+    {
+      image: "/assets/images/previous-work-2.png",
+      text: "Starbucks",
+    },
+    {
+      image: "/assets/images/previous-work-3.png",
+      text: "PG&E",
+    },
+    {
+      image: "/assets/images/previous-work-4.png",
+      text: "Go beyond",
+    },
+    {
+      image: "/assets/images/previous-work-5.png",
       text: "Sell everywhere",
     },
     {
-      icon: "security",
+      image: "/assets/images/previous-work-6.jpeg",
       text: "Secured payments",
     },
     {
-      icon: "language",
+      image: "/assets/images/previous-work-7.webp",
       text: "Smart pricing",
     },
     {
-      icon: "fastfood",
+      image: "/assets/images/previous-work-8.png",
       text: "Go beyond",
     },
   ];
@@ -43,8 +59,8 @@ const Service6 = () => {
     <div className="section" id="service6">
       <div className="container">
         <div className="section__header mb-48">
-          <h2>Grow Your Business</h2>
-          <p>Access integrations and new features in a matter of seconds</p>
+          <h2>Worked with</h2>
+          <p>many professional world class businesses.</p>
         </div>
         <Grid container justify="center" alignItems="center" spacing={4}>
           {cardList.map((card, index) => (
@@ -63,9 +79,10 @@ const Service6 = () => {
                   classes.card
                 )}
               >
-                <Icon className="card-icon"> {card.icon} </Icon>
+                <img className="rounded h-full w-full" src={card.image} alt="random" />
+                
               </div>
-              <p className="uppercase">{card.text}</p>
+              <p>{card.text}</p>
             </Grid>
           ))}
         </Grid>

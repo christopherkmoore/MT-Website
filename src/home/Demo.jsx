@@ -61,7 +61,7 @@ const Demo = () => {
             </Grid>
 
             <Grid item md={4} xs={12}>
-              <NavLink to="/landing4" className="mx-1">
+              <NavLink to="/MileTracker" className="mx-1">
                 <Card className="card text-center">
                   <img
                     className="max-w-full"
@@ -145,7 +145,7 @@ const Demo = () => {
             </Grid>
 
             <Grid item md={4} xs={12}>
-              <NavLink to="/landing11" className="mx-1">
+              <NavLink to="/Home" className="mx-1">
                 <Card className="card text-center">
                   <img
                     className="max-w-full"

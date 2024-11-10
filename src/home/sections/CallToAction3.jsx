@@ -53,15 +53,17 @@ const CallToAction3 = () => {
             nonumy eirmod tempor invidunt ut labore et dolore
           </p>
           <div className="flex justify-center flex-wrap">
-            <Fab className="mr-6 px-6" variant="extended" color="primary">
+            {/* <Fab className="mr-6 px-6" variant="extended" color="primary">
               <Icon fontSize="small" className="mr-3">
                 android
               </Icon>
               Play Store
-            </Fab>
+            </Fab> */}
             <Fab className="px-6" variant="extended" color="primary">
               <AppleIcon fontSize="small" className="mr-3" />
-              App Store
+              <a href="https://apps.apple.com/us/app/miletracker/id6504142555">
+                App Store
+              </a>
             </Fab>
           </div>
         </div>

@@ -24,14 +24,13 @@ const Intro11 = () => {
             alt="laptop"
             className="full"
           />
-          <h1 className="font-normal m-0 text-48">Social Media Marketing</h1>
+          <h1 className="font-normal m-0 text-48">A Master in mobile technologies</h1>
           <h1 className="font-normal m-0 text-48 text-primary">
-            Is the best ever
+            find help you need.
           </h1>
 
           <p className="text-center mt-10 mb-14 max-w-400 mx-auto">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod.
+            Contact me to see if we can help your idea grow.
           </p>
 
           <div className="flex justify-center">
@@ -40,14 +39,14 @@ const Intro11 = () => {
               color="primary"
               className="mr-4 border-radius-8 hover-bg-primary"
             >
-              GET STARTED
+              SEE PRODUCTS
             </Button>
             <Button
               variant="contained"
               color="primary"
               className="border-radius-8"
             >
-              CONTACT US
+              CONTACT ME
             </Button>
           </div>
         </div>

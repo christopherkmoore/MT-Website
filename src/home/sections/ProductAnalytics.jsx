@@ -63,6 +63,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const features = [
+  "Exportable as PDF Images with invoice information.",
+  "No limit to how many reports you can make.",
+  "Ease to use interface for quickly creating new reports."
+]
+
 const ProductAnalytics = () => {
   const classes = useStyles();
 
@@ -74,7 +80,7 @@ const ProductAnalytics = () => {
             <div className={classes.musicImageWrapper}>
               <img
                 className={classes.musicImage}
-                src="/assets/images/mobile-3.svg"
+                src="/assets/images/mt-reports-dark-full-1.png"
                 alt="mobile-1"
               />
             </div>
@@ -82,27 +88,22 @@ const ProductAnalytics = () => {
           <Grid item lg={6} md={6} sm={6} xs={12}>
             <div>
               <h1 className="mt-0 font-normal text-44">
-                Great Product Analytics
+                Reports
               </h1>
               <p className="mb-8 max-w-400">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                justo duo dolores et ea rebum.
+                Generate reports to invoice your employer for reinbursement. Use reports to organize
+                the trips you create and see summary details.
               </p>
-              {[1, 2, 3].map((item) => (
+              {features.map((item) => (
                 <div key={item} className="flex items-center">
                   <Icon className="mr-4" color="primary">
                     done
                   </Icon>
                   <p className="my-2">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    {item}
                   </p>
                 </div>
               ))}
-              <Button className="mt-8" variant="text" color="primary">
-                CLICK TO VIEW MORE <Icon>navigate_next</Icon>
-              </Button>
             </div>
           </Grid>
         </Grid>

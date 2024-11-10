@@ -23,8 +23,9 @@ import { typographyStyles } from './styles/jss/utilities/_typography';
 import "react-perfect-scrollbar/dist/css/styles.css";
 import GlobalCss from "./styles/jss/GlobalCss";
 
-import Landing4 from "./home/Landing4";
-import Landing11 from "./home/Landing11";
+import MileTracker from "./home/MileTracker";
+import Home from "./home/Home";
+import Contact from "./home/Contact";
 
 function App() {
   return (
@@ -46,8 +47,11 @@ function App() {
         >
           <Router basename="/">
             <Routes>
-              <Route path="/" element={<Landing11 to="/landing11" />} />
-              <Route path="/MileTracker" element={<Landing4 to="/landing4" />} />
+              <Route path="/" element={<Home to="/Home" />} />
+              <Route path="/MileTracker/privacyPolicy" element={<MileTracker to="/MileTracker" />} />
+              <Route path="/contact" element={<Contact to="/Contact" />} />
+
+              <Route path="/MileTracker" element={<MileTracker to="/MileTracker" />} />
               {/* <Route component={Error} /> */}
             </Routes>
           </Router>

@@ -161,6 +161,7 @@ export const spacingStyles = (
         ".min-w-full": { minWidth: "100% !important" },
         ".w-full-screen": { width: "100vw" },
         ".min-w-750": { minWidth: "750px" },
+        ".min-w-400": { minWidth: "400px" },
         ".max-w-450": { maxWidth: "450px" },
         ".max-w-550": { maxWidth: "550px" },
         ".max-w-600": { maxWidth: "600px" },

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Button, Icon, Card, CardContent, Grid } from "@mui/material";
+import { Card, CardContent, Grid, Icon } from "@mui/material";
 import { makeStyles } from '@mui/styles';
 
 import clsx from "clsx";
@@ -26,39 +26,40 @@ const Services1 = () => {
 
   const serviceList = [
     {
-      icon: "dashboard",
-      title: "Business Application",
+      icon: "stay_primary_portrait",
+      title: "Mobile Application",
       text:
-        "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.",
+        "Build cutting edge mobile apps using the most modern technolgies like SwiftUI and Jetpack Compose.",
     },
     {
-      icon: "perm_data_setting",
-      title: "Custom System Integration",
+      icon: "computer",
+      title: "Website Development",
       text:
-        "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.",
+        "From a personal site to admin dashboards, we can start today",
+    },
+    {
+      icon: "cloud_queue",
+      title: "AWS Cloud Software",
+      text:
+        "AWS expertise in cloud software, including RDS, Lambda, S3, SQS, EC2, and Gateway - build the most scalable tech in the world.",
     },
     {
       icon: "storage",
       title: "Database Administration",
       text:
-        "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.",
+        "Professional relational database storage, graph or something as simple as S3 for all your storage needs.",
     },
-    {
-      icon: "stay_primary_portrait",
-      title: "Custom Mobile Application",
-      text:
-        "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.",
-    },
+
   ];
 
   return (
     <section className="section bg-light-gray" id="service1">
       <div className="container">
         <div className="section__header">
-          <h2>Our Services</h2>
+          <h2>My Services</h2>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
-            unde inventore molestias ab adipisci eius nisi placeat at.
+            Expertise from start to finish across all ends of technical development.
+            Whatever you need, I have the expertise.
           </p>
         </div>
 
@@ -74,9 +75,9 @@ const Services1 = () => {
                     <h3 className="font-light text-24">{service.title}</h3>
                     <p>{service.text}</p>
                   </div>
-                  <div className="pt-4">
+                  {/* <div className="pt-4">
                     <Button>READ MORE</Button>
-                  </div>
+                  </div> */}
                 </CardContent>
               </Card>
             </Grid>

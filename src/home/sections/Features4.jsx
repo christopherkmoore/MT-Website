@@ -86,10 +86,10 @@ const Feature4 = () => {
         <Grid container spacing={isMobile ? 3 : 10} alignItems="center">
           <Grid item lg={8} md={6} sm={6} xs={12}>
             <div className="max-w-400 mb-16">
-              <h1 className="mt-0 font-normal text-44">App Features</h1>
+              <h1 className="mt-0 font-normal text-44">Tracks you</h1>
               <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor
+                Start the tracking or use the auto-tracking feature to get 
+                a snapshot of your movement while you record!
               </p>
             </div>
 

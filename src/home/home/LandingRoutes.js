@@ -18,8 +18,8 @@ const landingRoutes = [
     component: React.lazy(() => import("./Landing3")),
   },
   {
-    path: "/landing4",
-    component: React.lazy(() => import("./Landing4")),
+    path: "/MileTracker",
+    component: React.lazy(() => import("./MileTracker")),
   },
   {
     path: "/landing5",
@@ -46,8 +46,8 @@ const landingRoutes = [
     component: React.lazy(() => import("./Landing10")),
   },
   {
-    path: "/landing11",
-    component: React.lazy(() => import("./Landing11")),
+    path: "/Home",
+    component: React.lazy(() => import("./Home")),
   },
   {
     path: "/landing12",

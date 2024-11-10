@@ -55,12 +55,12 @@ const TopBar3 = (props) => {
       })}
     >
       <div className="container header-container">
-        <div className="brand">
+        {/* <div className="brand">
           <img src="./assets/images/react-logo.svg" alt="" />
-        </div>
+        </div> */}
         <ul className="navigation">
           <li>
-            <NavLink to="/demos">Demos</NavLink>
+            <NavLink to="/products">Products</NavLink>
           </li>
           <li>
             <ScrollTo to="intro3" onScroll={close}>

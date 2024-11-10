@@ -8,10 +8,8 @@ import {
   InputAdornment,
 } from "@mui/material";
 import { darken } from "@mui/material";
-import FacebookIcon from "../common/icons/FacebookIcon";
-import TwitterIcon from "../common/icons/TwitterIcon";
-import InstagramIcon from "../common/icons/InstagramIcon";
 import LinkedinIcon from "../common/icons/LinkedinIcon";
+import InstagramIcon from "../common/icons/InstagramIcon";
 import clsx from "clsx";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
@@ -38,14 +36,21 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
   },
 }));
 
-const companyOption = ["About Us", "Services", "Team", "Pricing", "Project"];
+const companyOption = ["About Me", "Services", "Team", "Pricing", "Project"];
 
 const userfulLink = [
-  "Terms of Services",
-  "Privacy Policy",
-  "Documentation",
-  "Changelog",
-  "Components",
+  // {
+  //   title: "Terms of Services",
+  //   link: "https://staging.d1spf6k7qx7ko1.amplifyapp.com/"
+  // },
+  {
+    title: "Privacy Policy",
+    link: "https://none.d1kcel26541ny4.amplifyapp.com/"
+  },
+  {
+    title: "Contact Me",
+    link: "https://staging.d1spf6k7qx7ko1.amplifyapp.com/"
+  }
 ];
 
 const Footer2 = () => {
@@ -54,22 +59,18 @@ const Footer2 = () => {
   return (
     <section className={`section ${classes.section}`} id="contact4">
       <div className="container">
-        <Grid container spacing={3}>
-          <Grid item lg={3} md={3} sm={6} xs={12}>
-            <div className="footer1__about">
-              <h4 className="text-24 font-normal m-0">About Us</h4>
-              <p className="my-6 max-w-200 text-inherit">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Officiis perferendis rem, aut aliquam neque nam? dolor sit amet,
-                consectetur adipisicing elit consectetur adipisicing.
+        <Grid container>
+          <Grid item lg={6} md={6} sm={12}>
+            <div className="p-8 h-full elevation-z3">
+              <h4 className="text-20 mb-6 relative">About Me</h4>
+              <p className="text-inherit">
+                Christopher Moore <br></br>
+                Expert Mobile Developer & Tech Enthusiast.
+                <br></br>
+                <br></br>
+                Check out some of my work, or reach me here
               </p>
               <div className="flex flex-wrap">
-                <div className={classes.iconWrapper}>
-                  <FacebookIcon className="text-13" fontSize="small" />
-                </div>
-                <div className={classes.iconWrapper}>
-                  <TwitterIcon className="text-13" fontSize="small" />
-                </div>
                 <div className={classes.iconWrapper}>
                   <InstagramIcon className="text-13" fontSize="small" />
                 </div>
@@ -79,28 +80,30 @@ const Footer2 = () => {
               </div>
             </div>
           </Grid>
-          <Grid item lg={3} md={3} sm={6} xs={12}>
-            <div className="footer1__about">
-              <h4 className="text-24 font-normal m-0">Company</h4>
-              <div className="mt-4 mb-6 ml--4">
-                {companyOption.map((item, ind) => (
-                  <div
-                    key={ind}
-                    className={clsx(
-                      "flex items-center py-2 cursor-pointer px-4 w-full",
-                      classes.link
-                    )}
-                  >
-                    <Icon>navigate_next</Icon>
-                    <span>{item}</span>
-                  </div>
-                ))}
+          <Grid item lg={3} md={3} sm={12}>
+            <div className="p-8 h-full elevation-z3">
+              <h4 className="text-20 mb-6 relative">Contact</h4>
+              <div className="px-4 my-8 flex items-center mx--4">
+                <Icon className="text-secondary">mail</Icon>
+                <div className="pl-4">
+                  <h5 className="m-0 p-0 text-16">Email</h5>
+                  <p className="m-0 p-0 text-inherit">christopherkmoore1@gmail.com</p>
+                </div>
+              </div>
+              <div className="px-4 mt-8 flex items-center mx--4">
+                <Icon className="text-secondary">location_on</Icon>
+                <div className="pl-4">
+                  <h5 className="m-0 p-0 text-16">Address</h5>
+                  <p className="m-0 p-0 text-inherit">
+                    San Diego, California
+                  </p>
+                </div>
               </div>
             </div>
           </Grid>
           <Grid item lg={3} md={3} sm={6} xs={12}>
-            <div className="footer1__about">
-              <h4 className="text-24 font-normal m-0">Useful Links</h4>
+            <div className="p-8 h-full ">
+              <h4 className="text-20 mb-6 relative">Useful Links</h4>
               <div className="mt-4 mb-6 ml--4">
                 {userfulLink.map((item, ind) => (
                   <div
@@ -111,46 +114,13 @@ const Footer2 = () => {
                     )}
                   >
                     <Icon>navigate_next</Icon>
-                    <span>{item}</span>
+                    <a href={item.link}><span>{item.title}</span></a>
                   </div>
                 ))}
               </div>
             </div>
           </Grid>
-          <Grid item lg={3} md={3} sm={6} xs={12}>
-            <div className="footer1__about">
-              <h4 className="text-24 font-normal m-0">Newsletter</h4>
-              <p className="my-6 text-inherit">Sign Up for the latest news</p>
-              <TextField
-                className="mb-4"
-                size="small"
-                placeholder="Your Email"
-                variant="outlined"
-                fullWidth
-                inputProps={{
-                  style: {
-                    paddingLeft: 8,
-                    color: "#fff",
-                  },
-                }}
-                InputProps={{
-                  style: {
-                    paddingLeft: 4,
-                  },
-                  startAdornment: (
-                    <InputAdornment position="end">
-                      <Icon fontSize="small" className="text-white">
-                        email
-                      </Icon>
-                    </InputAdornment>
-                  ),
-                }}
-              />
-              <Button className="w-full" variant="contained" color="primary">
-                SUBSCRIBE
-              </Button>
-            </div>
-          </Grid>
+
         </Grid>
       </div>
     </section>

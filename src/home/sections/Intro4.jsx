@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Intro4 = () => {
   const classes = useStyles();
-
+  //https://www.pixelcut.ai/t/background-remover
   return (
     <section className="section section-intro" id="intro4">
       <div className="container">
@@ -71,29 +71,30 @@ const Intro4 = () => {
             <div className={classes.musicImageWrapper}>
               <img
                 className={classes.musicImage}
-                src="/assets/images/mobile-1.svg"
+                src="/assets/images/mt-home-dark-full-1.png"
                 alt="mobile-1"
               />
             </div>
           </Grid>
           <Grid item lg={6} md={6} sm={6} xs={12}>
             <div>
-              <p className="text-primary m-0 mb-4 text-20">Evalynn Music</p>
-              <h1 className="font-normal text-44 mt-0">Best Music App 2020</h1>
+              <p className="text-primary m-0 mb-4 text-20">MileTracker+</p>
+              <h1 className="font-normal text-44 mt-0">Records while you drive!</h1>
               <p className="max-w-400 mb-8">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                A free app for mileage, exercise or hiking. Use Reports to generate invoices
+                or the Trends see how often you drive and when.
+                
               </p>
-              <Button
+              {/* <Button
                 className={classes.themeText + " rounded px-12 text-black"}
                 variant="outlined"
                 color="primary"
               >
                 CLICK TO WATCH A VIDEO
-              </Button>
+              </Button> */}
 
               <div className="mt-25 flex flex-wrap">
-                <Button
+                {/* <Button
                   className="mr-6 px-6 mb-4 rounded py-3"
                   variant="contained"
                   color="primary"
@@ -102,14 +103,16 @@ const Intro4 = () => {
                     android
                   </Icon>
                   Play Store
-                </Button>
+                </Button> */}
                 <Button
                   className="px-6 mb-4 rounded py-3"
                   variant="contained"
                   color="primary"
                 >
                   <AppleIcon fontSize="small" className="mr-3" />
-                  App Store
+                  <a href="https://apps.apple.com/us/app/miletracker/id6504142555">
+                    App Store
+                  </a>
                 </Button>
               </div>
             </div>

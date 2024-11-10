@@ -1,7 +1,7 @@
 import React from "react";
 import Footer2 from "./sections/Footer2";
 
-import TopBar11 from "./sections/TopBar11";
+import TopBar3 from "./sections/TopBar3";
 import Intro11 from "./sections/Intro11";
 import Clients1 from "./sections/Clients1";
 import Features11 from "./sections/Features11";
@@ -11,10 +11,10 @@ import Services11 from "./sections/Services11";
 import FAQ1 from "./sections/FAQ1";
 import Subscription2 from "./sections/Subscription2";
 
-const Landing11 = () => {
+const Home = () => {
   return (
     <div className="landing">
-      <TopBar11 />
+      <TopBar3 />
       <Intro11 />
       <Clients1 />
       <Features11 />
@@ -28,4 +28,4 @@ const Landing11 = () => {
   );
 };
 
-export default Landing11;
+export default Home;

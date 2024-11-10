@@ -56,24 +56,9 @@ const TopBar11 = (props) => {
         </div>
         <ul className="navigation">
           <li>
-            <ScrollTo to="intro8" onScroll={close}>
-              Home
-            </ScrollTo>
-          </li>
-          <li>
-            <ScrollTo to="gallery1" onScroll={close}>
-              Products
-            </ScrollTo>
-          </li>
-          <li>
-            <ScrollTo to="service1" onScroll={close}>
-              Services
-            </ScrollTo>
-          </li>
-          <li>
-            <ScrollTo to="cta1" onScroll={close}>
-              Contact
-            </ScrollTo>
+          <NavLink to="/">
+            Home
+          </NavLink>
           </li>
         </ul>
         <div className="m-auto" />

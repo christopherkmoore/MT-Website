@@ -2,6 +2,13 @@ import React from "react";
 import { Grid, Icon, Button, Avatar } from "@mui/material";
 import { makeStyles } from '@mui/styles';
 import clsx from "clsx";
+import { NavLink } from "react-router-dom";
+
+
+const strengths = ["Future proof your app with my excellence in SwiftUI & Jetpack Compose.",
+  "Stay up-to-date with the latest design and mobile trends.",
+  "Always be on the cutting edge with high-performance applications."
+]
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   imageWrapper: {
@@ -78,34 +85,34 @@ const Intro8 = () => {
             >
               <div className="relative">
                 <img
-                  src="/assets/images/Laptop-1.png"
+                  src="/assets/images/app1.png"
                   alt="Laptop"
                   className="w-full block mt-6"
                 />
-                <div className="price flex items-center justify-center bg-paper">
+                {/* <div className="price flex items-center justify-center bg-paper">
                   <h4 className="text-18 font-normal m-0">$ 499.99</h4>
-                </div>
+                </div> */}
               </div>
             </div>
           </Grid>
           <Grid item sm={6} xs={12}>
-            <h1 className="mt-0 mb-4 font-normal text-48">Evelynn Laptop</h1>
+            <h1 className="mt-0 mb-4 font-normal text-48">Christopher Moore</h1>
             <h4 className="text-primary font-normal text-20 m-0">
-              Best performance in the lowest price
+              Expert Mobile Developer & Tech Enthusiast.
             </h4>
             <p className="my-8 max-w-400">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat
+              With years of experience in developing innovative mobile apps,
+              I bring  a unique blend of creativity, technical expertise, and passion
+              to every project I undertake. My specialties include mobile app design, development,
+              and deployment on mobile platforms.
             </p>
-
-            {[1, 2, 3].map((item) => (
+            {strengths.map((item) => (
               <div key={item} className="flex items-center">
                 <Icon className="mr-4" color="primary">
                   done
                 </Icon>
                 <p className="my-2">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  {item}
                 </p>
               </div>
             ))}
@@ -113,20 +120,21 @@ const Intro8 = () => {
             <div className="mt-12">
               <div className="mb-4">
                 <Button
+                  variant="contained"
+                  color="primary"
+                  className="rounded px-2px py-2px "
+                >
+                  <NavLink className="pl-8 pr-7" to="/Contact">Hire me</NavLink>
+                </Button>
+
+              </div>
+              <div>
+                <Button
                   variant="outlined"
                   color="primary"
                   className="rounded px-2px py-2px"
                 >
-                  <span className="pl-5 pr-2">WATCH A REVIEW</span>
-                  <Avatar className="h-32 w-32 bg-primary">
-                    <Icon>play_arrow</Icon>
-                  </Avatar>
-                </Button>
-              </div>
-              <div>
-                <Button className="px-8 text-white bg-primary rounded">
-                  <Icon fontSize="small">add_shopping_cart</Icon>
-                  <span className="ml-2">ADD TO CART</span>
+                  <NavLink className="pl-8 pr-7" to="/MileTracker">See products</NavLink>
                 </Button>
               </div>
             </div>
