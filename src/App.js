@@ -48,8 +48,8 @@ function App() {
           <Router basename="/">
             <Routes>
               <Route path="/" element={<Home to="/Home" />} />
-              <Route path="/MileTracker/privacyPolicy" element={<MileTracker to="/MileTracker" />} />
-              <Route path="/contact" element={<Contact to="/Contact" />} />
+              {/* <Route path="/MileTracker/privacyPolicy" element={<MileTracker to="/MileTracker" />} />
+              <Route path="/contact" element={<Contact to="/Contact" />} /> */}
 
               <Route path="/MileTracker" element={<MileTracker to="/MileTracker" />} />
               {/* <Route component={Error} /> */}
