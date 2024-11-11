@@ -48,10 +48,10 @@ const CallToAction3 = () => {
       <div className="container">
         <div className={clsx("text-center mx-auto", classes.wrapper)}>
           <h1 className="mt-0 mb-7 font-normal text-44">Download Now !</h1>
-          <p className="max-w-400 mx-auto mb-8">
+          {/* <p className="max-w-400 mx-auto mb-8">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore
-          </p>
+          </p> */}
           <div className="flex justify-center flex-wrap">
             {/* <Fab className="mr-6 px-6" variant="extended" color="primary">
               <Icon fontSize="small" className="mr-3">
