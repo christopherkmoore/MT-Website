@@ -7,6 +7,9 @@ import { Container } from "@mui/material";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   introWrapper: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     overflowX: "clip",
     overflowY: "clip"
   },
@@ -41,7 +44,6 @@ const BlogPost = ({ post }) => {
           <h1 className="font-normal text-44 mt-0">{post.title}</h1>
           <h6>{post.readTime} read - {post.date}</h6>
           {/*  keywords for tags */}
-          <p className="max-w-400 mb-16"> </p>
           <div className="text-center">
             <div className={classes.introWrapper}>
               <img src={post.imageHeadline} alt="empty"></img>
