@@ -1,0 +1,21 @@
+
+### Why won't my amplify deploy my markdown file!
+
+While I was creating this blog, I had one heck of a time trying to render a .md file into a react component -- here are the pain points
+- You need to import a library to render the markdown `react-markdown`
+- That renderer doesn't actually apply styles 🙈
+-   ***Your server won't want to actually serve the MD file***
+
+The first two are easily solvable with searches, luckily react has plenty of support that allow you to fix this problem quickly.
+
+What's more frustrating is trying to understand why you can easily fetch and serve a file on localhost, but once it's deployed to AWS Amplify, and the image is served from AWS S3, it no longer works.
+
+I still don't know the answer to the question, and if someone does, please email me to let me know!
+
+However, an easy workaround is this:
+**just serve the file as a .txt instead of a .md**
+
+Sometimes it's easier to think around the solution than it is to think through the solution.
+
+**Topics**
+Markdown, AWS Amplify, AWS S3, AWS

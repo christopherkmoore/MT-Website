@@ -55,5 +55,5 @@ While this code snippet demonstrates a basic collapsible indicator, you can easi
 * **Change the animation duration**: Adjust the `withAnimation` block's parameters to control how quickly the toggle occurs.
 * **Add a gesture recognizer**: Instead of using a button, you can attach a gesture recognizer to a View and update the rotation effect based on user input.
 
-**Conclusion**
-
+**Topics**
+SwiftUI, #Preview, Maacros, WWDC23, Rotation Effects

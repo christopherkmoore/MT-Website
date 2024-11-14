@@ -1,6 +1,16 @@
 
 import React, { useEffect, useState } from "react";
 import { MarkdownRenderer } from "./Markdown";
+import { makeStyles } from '@mui/styles';
+import { Container } from "@mui/material";
+
+
+const useStyles = makeStyles(({ palette, ...theme }) => ({
+  introWrapper: {
+    overflowX: "clip",
+    overflowY: "clip"
+  },
+}));
 
 const getResource = async (filepath) => {
   const res = await fetch(`${filepath}`);
@@ -15,6 +25,7 @@ const getResource = async (filepath) => {
 
 
 const BlogPost = ({ post }) => {
+  const classes = useStyles();
 
   const [text, setText] = useState(""); // init with an empty string
 
@@ -25,14 +36,17 @@ const BlogPost = ({ post }) => {
   return (
     <section className="section section-bg-light-primary" id="blogPost">
       <div className="container">
-        <div className="mb-16 mx-auto">
+        <div className="max-w-800 mx-auto">
           <br />
           <h1 className="font-normal text-44 mt-0">{post.title}</h1>
           <h6>{post.readTime} read - {post.date}</h6>
           {/*  keywords for tags */}
           <p className="max-w-400 mb-16"> </p>
           <div className="text-center">
-            <img src={post.imageHeadline} alt="empty"></img>
+            <div className={classes.introWrapper}>
+              <img src={post.imageHeadline} alt="empty"></img>
+            </div>
+
             <br></br>
             <br></br>
             <br></br>

@@ -23,6 +23,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
         "&:hover $imageOverlay": {
             opacity: 1,
         },
+
     },
     imageOverlay: {
         position: "absolute",
@@ -87,6 +88,7 @@ const BlogCard = ({ post }) => {
                 </p>
                 <Divider className="bg-light-primary" />
                 <div className="flex justify-between items-right my-1">
+                    {post.readTime} read
                     <div className="flex justify-between items-center">
                     </div>
                     <ButtonGroup variant="plain" >
