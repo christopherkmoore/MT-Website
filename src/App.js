@@ -24,8 +24,9 @@ import "react-perfect-scrollbar/dist/css/styles.css";
 import GlobalCss from "./styles/jss/GlobalCss";
 
 import Home from "./home/Home";
+import BlogLanding from "./home/BlogLanding";
 import MileTracker from "./home/MileTracker";
-
+import BlogPostPage from "./home/BlogPostPage";
 function App() {
   return (
     <ThemeProvider theme={Theme}>
@@ -47,6 +48,8 @@ function App() {
           <Router basename="/">
             <Routes>
               <Route path="/" element={<Home to="/Home" />} />
+              <Route path="/blog" element={<BlogLanding to="/blog" />} />
+              <Route path="/blog/:slug" element={<BlogPostPage to="/blog/:slug" />} />
               {/* <Route path="/MileTracker/privacyPolicy" element={<MileTracker to="/MileTracker" />} />
               <Route path="/contact" element={<Contact to="/Contact" />} /> */}
 

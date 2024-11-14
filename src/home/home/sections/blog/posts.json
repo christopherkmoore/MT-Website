@@ -1,0 +1,16 @@
+
+[
+    {
+        "imageUrl": "./assets/images/blogposts/1/thumbnail-2.png",
+        "fileUrl": "./assets/images/blogposts/1/post.md",
+        "imageHeadline": "./assets/images/blogposts/1/screenshot.png",
+        "dateMonth": "Nov",
+        "dateDay": "13",
+        "dateYear": "2024",
+        "date": "November 13, 2024",
+        "readTime": "5 min",
+        "title": "Collapsable Indicator",
+        "urlSlug": "collapsable-indicator",
+        "details": "Build a collapsable indicator in pure SwiftUI"
+    }
+]

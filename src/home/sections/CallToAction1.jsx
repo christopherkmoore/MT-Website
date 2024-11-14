@@ -1,8 +1,7 @@
 import React from "react";
 
-import { Grid, Button } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import { makeStyles } from '@mui/styles';
-import { NavLink } from "react-router-dom";
 
 import clsx from "clsx";
 
@@ -35,7 +34,11 @@ const CallToAction1 = ({ bg }) => {
           </Grid>
           <Grid item lg={4} md={4} sm={12} xs={12} className="text-center">
             <Button size="large" color="secondary" variant="contained">
-              <NavLink className="pl-8 pr-7" to="/Contact">Contact me</NavLink>
+              {/* <NavLink className="pl-8 pr-7" to="/Contact"> */}
+              <a href="mailto:christopherkmoore1@gmail.com?subject=Hello!">
+                Contact me
+              </a>
+              {/* </NavLink> */}
             </Button>
           </Grid>
         </Grid>

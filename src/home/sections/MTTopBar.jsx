@@ -47,13 +47,23 @@ const TopBar11 = (props) => {
           <NavLink to="/">
             Christopher Moore
           </NavLink>
-          
+
         </div>
         <ul className="navigation">
           <li>
-          <NavLink to="/">
-            Home
-          </NavLink>
+            <NavLink to="/">
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/MileTracker">
+              Products
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/blog">
+              Blog
+            </NavLink>
           </li>
         </ul>
         <div className="m-auto" />

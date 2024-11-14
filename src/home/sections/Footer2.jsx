@@ -8,7 +8,6 @@ import clsx from "clsx";
 import React from "react";
 import GithubIcon from "../common/icons/GithubIcon";
 import LinkedinIcon from "../common/icons/LinkedinIcon";
-import { NavLink } from "react-router-dom";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   section: {

@@ -52,9 +52,14 @@ const TopBar11 = (props) => {
           <NavLink to="/">
             Christopher Moore
           </NavLink>
-          
+
         </div>
         <ul className="navigation">
+          <li>
+            <NavLink to="/blog">
+              Blog
+            </NavLink>
+          </li>
           <li>
             <ScrollTo to="intro8" onScroll={close}>
               Home

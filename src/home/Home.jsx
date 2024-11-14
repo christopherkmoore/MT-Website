@@ -4,13 +4,13 @@ import Footer2 from "./sections/Footer2";
 import CallToAction1 from "./sections/CallToAction1";
 import Gallery1 from "./sections/Gallery1";
 import Intro8 from "./sections/Intro8";
+import MTTopBar from "./sections/MTTopBar";
 import Services1 from "./sections/Services1";
-import TopBar11 from "./sections/TopBar11";
 
 const Home = () => {
   return (
     <div className="landing">
-      <TopBar11 />
+      <MTTopBar />
       <Intro8 />
       {/* <Intro9 />     if I had a better image maybe this would be nice. */}
       {/* <Portfolio1 /> will be better when i have more than 1 project.*/ }
