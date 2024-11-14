@@ -2,7 +2,7 @@
 [
     {
         "imageUrl": "./blogposts/1/thumbnail-2.png",
-        "fileUrl": "./blogposts/1/post.md",
+        "fileUrl": "./blogposts/1/post.txt",
         "imageHeadline": "./blogposts/1/screenshot.png",
         "dateMonth": "Nov",
         "dateDay": "13",
