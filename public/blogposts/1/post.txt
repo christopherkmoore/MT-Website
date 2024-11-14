@@ -56,4 +56,4 @@ While this code snippet demonstrates a basic collapsible indicator, you can easi
 * **Add a gesture recognizer**: Instead of using a button, you can attach a gesture recognizer to a View and update the rotation effect based on user input.
 
 **Topics**
-SwiftUI, #Preview, Maacros, WWDC23, Rotation Effects
+SwiftUI, #Preview, Macros, WWDC23, Rotation Effects

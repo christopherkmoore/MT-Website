@@ -8,6 +8,7 @@ import clsx from "clsx";
 import React from "react";
 import GithubIcon from "../common/icons/GithubIcon";
 import LinkedinIcon from "../common/icons/LinkedinIcon";
+import MediumIcon from "../common/icons/MediumIcon";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   section: {
@@ -60,7 +61,7 @@ const Footer2 = () => {
           <Grid item lg={6} md={6} sm={12}>
             <div className="p-8 h-full elevation-z3">
               <h4 className="text-20 mb-6 relative">
-              Christopher Moore
+                Christopher Moore
               </h4>
               <p className="text-inherit">
                 Check out some of my work, or reach me here:
@@ -75,7 +76,12 @@ const Footer2 = () => {
                   <a href="https://www.linkedin.com/in/christopher-moore1/">
                     <LinkedinIcon className="text-13" fontSize="small" />
                   </a>
-                </div>
+                  </div>
+                  <div className={classes.iconWrapper}>
+                    <a href="https://medium.com/@christopherkmoore">
+                      <MediumIcon className="text-13" fontSize="small" />
+                    </a>
+                  </div>
                 <div className={classes.iconWrapper}>
                   <a href="https://www.paypal.com/donate/?business=P5YETTFZG73JG&no_recurring=0&currency_code=USD"><u>Consider buying me a coffee ☕️ </u></a>
 

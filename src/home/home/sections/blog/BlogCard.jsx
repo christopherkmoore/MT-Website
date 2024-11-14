@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import { makeStyles } from '@mui/styles';
 import clsx from "clsx";
+import MediumIconFilled from "../../../common/icons/MediumIconFilled";
 
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
@@ -63,16 +64,15 @@ const BlogCard = ({ post }) => {
                     alt="sq-1"
                 />
                 <div className={classes.imageOverlay}>
-                <Link to={`/blog/${post.urlSlug}`}>
-                    <Button
-                        className="text-white"
-                        variant="text"
-                        color="primary"
-                    >
-
-                        Click to read more
-                    </Button>
-                </Link>
+                    <Link to={`/blog/${post.urlSlug}`}>
+                        <Button
+                            className="text-white"
+                            variant="text"
+                            color="primary"
+                        >
+                            Click to read more
+                        </Button>
+                    </Link>
                 </div>
             </div>
             <div className="px-4 pt-4">
@@ -92,12 +92,12 @@ const BlogCard = ({ post }) => {
                     <div className="flex justify-between items-center">
                     </div>
                     <ButtonGroup variant="plain" >
-                        {/* <Button>
-                            <Icon fontSize="small" >
-                                share
-                            </Icon>
-                        </Button> */}
-                        <Button onClick={() => {navigator.clipboard.writeText("https://pixelper.com/#/blog/" + post.urlSlug)}}>
+                        {post.mediumUrl === undefined &&
+                            <a href={post.mediumUrl}>
+                                <MediumIconFilled fontSize="small" />
+                            </a>
+                        }
+                        <Button onClick={() => { navigator.clipboard.writeText("https://pixelper.com/#/blog/" + post.urlSlug) }}>
                             <Icon fontSize="small">
                                 link
                             </Icon>

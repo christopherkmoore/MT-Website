@@ -12,10 +12,12 @@
         "title": "Markdown files with AWS",
         "urlSlug": "aws-markdown-mystery",
         "details": "How to avoid .md files not being served."
+        
     },
     {
         "imageUrl": "./blogposts/1/thumbnail.png",
         "fileUrl": "./blogposts/1/post.txt",
+        "mediumUrl": "https://medium.com/@christopherkmoore/easy-collapsible-indicators-with-swiftui-b48623f666b6",
         "imageHeadline": "./blogposts/1/screenshot.png",
         "dateMonth": "Nov",
         "dateDay": "13",
