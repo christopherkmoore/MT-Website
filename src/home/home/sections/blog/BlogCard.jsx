@@ -92,7 +92,7 @@ const BlogCard = ({ post }) => {
                     <div className="flex justify-between items-center">
                     </div>
                     <ButtonGroup variant="plain" >
-                        {post.mediumUrl === undefined &&
+                        {post.mediumUrl !== undefined &&
                             <a href={post.mediumUrl}>
                                 <MediumIconFilled fontSize="small" />
                             </a>

@@ -1,13 +1,28 @@
 
 [
     {
+    "imageUrl": "./blogposts/3/thumbnail.jpeg",
+    "fileUrl": "./blogposts/3/post.txt",
+    "imageHeadline": "./blogposts/3/banner.jpeg",
+    "dateMonth": "Nov",
+    "dateDay": "15",
+    "dateYear": "2024",
+    "date": "November 15, 2024",
+    "readTime": "2 min",
+    "title": "How close is AI to replacing your job?",
+    "urlSlug": "ai-replace-your-job",
+    "details": "Is llama3.1 ready for your job?"
+    
+    },
+    {
         "imageUrl": "./blogposts/2/thumbnail.jpg",
         "fileUrl": "./blogposts/2/post.txt",
+        "mediumUrl": "https://medium.com/@christopherkmoore/why-wont-my-amplify-deploy-my-markdown-file-00c9903bd556",
         "imageHeadline": "./blogposts/2/banner.png",
         "dateMonth": "Nov",
         "dateDay": "14",
         "dateYear": "2024",
-        "date": "November 13, 2024",
+        "date": "November 14, 2024",
         "readTime": "2 min",
         "title": "Markdown files with AWS",
         "urlSlug": "aws-markdown-mystery",

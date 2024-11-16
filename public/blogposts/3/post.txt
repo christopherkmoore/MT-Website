@@ -1,0 +1,28 @@
+
+### Maybe AI is coming for your job...
+I used a lorem ipsum generator with a unique flavor to generate a paragraph of text... Then I told Llama 3.2 to write me a blog post using the following prompt. Without proper direction, the result was a near podcast length of LinkedIn flavored bs you'd never want to see. But a bit of direction went a long way:
+
+```
+write a linkedin 200 word blog post using this as inspiration:
+
+I'm baby semiotics JOMO yuccie, microdosing prism gentrify tumeric stumptown mukbang.
+Shabby chic scenester subway tile pork belly air plant vape art party bushwick tumeric man bun marfa gentrify la croix small batch distillery. 
+Hoodie seitan tilde four dollar toast. Neutral milk hotel tattooed DIY whatever portland chartreuse distillery.
+
+try to be funny and show wit. it doesn't have to make sense.
+```
+I would have preferred a more vape-heavy TikTok style banger but what I got wasn't horrible:
+
+```
+As someone who's been around the block a few times, I've noticed that there's a certain code that exists among the self-actualized. It's like a secret handshake, but with more artisanal coffee and less small talk.
+
+If you're not familiar with this dialect, don't worry – it's not like you need to know how to order a pour-over at a local café just to get by in life. But if you want to be part of the in-crowd, here are some essential phrases to learn:
+
+-   "Lowkey obsessed with my morning routine" means "I'm trying to adult."
+-   "Highkey loving this avocado toast" translates to "I have no idea what I'm doing with my life."
+-   And if someone says they're "manifesting their dreams," just nod politely and offer them a gluten-free muffin.
+
+So, there you have it – the language of the self-actualized in a nutshell. Or should I say, in a reusable water bottle?
+```
+
+I'd say AI is like 30% away from taking your job, so you have time.
