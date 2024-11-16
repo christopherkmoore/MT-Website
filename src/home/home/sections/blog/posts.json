@@ -1,9 +1,9 @@
 
 [
     {
-    "imageUrl": "./blogposts/3/thumbnail.jpeg",
+    "imageUrl": "./blogposts/3/thumbnail.png",
     "fileUrl": "./blogposts/3/post.txt",
-    "imageHeadline": "./blogposts/3/banner.jpeg",
+    "imageHeadline": "./blogposts/3/banner.png",
     "dateMonth": "Nov",
     "dateDay": "15",
     "dateYear": "2024",
@@ -17,7 +17,7 @@
     {
         "imageUrl": "./blogposts/2/thumbnail.jpg",
         "fileUrl": "./blogposts/2/post.txt",
-        "mediumUrl": "https://medium.com/@christopherkmoore/why-wont-my-amplify-deploy-my-markdown-file-00c9903bd556",
+        "mediumUrl": "https://medium.com/@christopherkmoore/easy-collapsible-indicators-with-swiftui-b48623f666b6",
         "imageHeadline": "./blogposts/2/banner.png",
         "dateMonth": "Nov",
         "dateDay": "14",
