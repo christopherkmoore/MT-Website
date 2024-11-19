@@ -1,0 +1,84 @@
+
+### Adding state to our progress tracker.
+In <a href="https://www.pixelper.com/#/blog/status-tracker" style="color: blue; text-decoration: underline;text-decoration-style: dotted;">
+part one</a> we learned how to create a simple static progress tracker.
+
+But it lacked the ability to recieve updates, and titles were tethered to state changes. Since we already have the states as colored icons, the text is a bit redudant.
+I wanted to change to display the state of a task.
+
+
+```swift
+import SwiftUI
+
+struct TappableStateProgress: View {
+   @Environment(\.colorScheme) var colorScheme
+   
+   enum Tracking: String {
+      
+      // advance to the next state   
+      func next() -> Tracking {}
+   }
+
+   struct StateTask: Identifiable {
+      let id = UUID()
+      var trackingBubble: Tracking
+      let description: String
+   }
+
+   
+   @State var stateTasksList: [StateTask] = [
+        .init(trackingBubble: .done, description: "Create Invoice"),
+        .init(trackingBubble: .done, description: "Invoice Sent"),
+        .init(trackingBubble: .inProgress, description: "Invoice Paid")
+   ]
+   
+   var body: some View {
+      GeometryReader { geometry in
+         ZStack {
+            Rectangle() // Draw the line intersecting everything.
+               
+            HStack {
+               Spacer()
+               ForEach($stateTasksList) { $stateTask in
+                  ZStack {
+                     Spacer()
+                     
+                     // Draw the Tracking Bubbles with taps for changing state
+                     Button {
+                        withAnimation {
+                           stateTask.trackingBubble = stateTask.trackingBubble.next()
+                        }
+                     } label: {
+                        TappableStateProgressCirlce(stateTask: stateTask, reader: geometry)
+                     }
+
+                     Text(stateTask.description) // Our Labels
+                        
+                  }
+                  Spacer()
+               }
+            }
+         }
+      }
+   }
+}
+
+```
+<div style="text-align: right;">
+<a href="https://github.com/christopherkmoore/SwiftUI-Components/blob/main/SwiftUI-Components/SwiftUI-Components/TappableStateProgress.swift" style="color: blue; text-decoration: underline;text-decoration-style: dotted;">
+see this code on github</a>
+</div>
+
+So as you can see only a few things changed.
+- Bubbles has been changed to Tracking to better qualify what it does.
+- We have added a simple next() function on Tracking to give us the next state.
+- Our datasource is now a swiftUI @State variable, so our UI knows to update when the datasource does.
+- We modified our datasource object from the direct enum we were using to a struct conforming to Identifiable.
+
+Most importanly we have updated our ForEach AsyncIterator to accept the binding to our datasource. 
+This means it will pass back a writable binding so that changes made to our objects will be reflected immediately in the UI.
+
+I plan to use this in my app <a href="https://www.pixelper.com/#/MileTracker" style="color: blue; text-decoration: underline;text-decoration-style: dotted;">
+MileTracker</a>. Let me know where you plan to use it!
+
+If you're feeling like you need a extra hand understanding feel free to reach out. As always it helps tremendously when you comment and like my content.

@@ -1,5 +1,19 @@
 
 [
+{
+    "imageUrl": "./blogposts/5/thumbnail.png",
+    "fileUrl": "./blogposts/5/post.txt",
+    "imageHeadline": "./blogposts/5/banner.gif",
+    "dateMonth": "Nov",
+    "dateDay": "18",
+    "dateYear": "2024",
+    "date": "November 18, 2024",
+    "readTime": "8 min",
+    "title": "Status Tracker",
+    "subSeriesTitle": "Part 2",
+    "urlSlug": "status-tracker-p2",
+    "details": "Updating the status tracker to have updatable state"
+    },
     {
     "imageUrl": "./blogposts/4/thumbnail.gif",
     "fileUrl": "./blogposts/4/post.txt",
@@ -10,6 +24,7 @@
     "date": "November 18, 2024",
     "readTime": "8 min",
     "title": "Status Tracker",
+    "subSeriesTitle": "Part 1",
     "urlSlug": "status-tracker",
     "details": "Make a customizable status tracker with SwiftUI"
     },

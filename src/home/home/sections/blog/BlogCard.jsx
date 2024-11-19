@@ -81,7 +81,10 @@ const BlogCard = ({ post }) => {
                         <p className="m-0 text-white">{post.dateDay}</p>
                         <small className="m-0 text-primary">{post.dateMonth}</small>
                     </div>
-                    <h5 className="m-0">{post.title}</h5>
+                    <div>
+                        <h5 className="m-0">{post.title}</h5>
+                        <h6 className="m-0">{post.subSeriesTitle}</h6>
+                    </div>
                 </div>
                 <p className="mt-6 mb-8">
                     {post.details}

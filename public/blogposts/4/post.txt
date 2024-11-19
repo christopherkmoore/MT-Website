@@ -2,19 +2,19 @@
 ### You should rip this code off for your production app.
 Seriously it even works well with dark mode if you're into that sort of thing.
 
-
-Here's a bit of a summary for how we will do this.
+This ones a lot of code, but luckily it's pretty simple. 
+So let's get into the breakdown:
 
 ```swift
 struct StateProgress: View {
-    enum Bubbles {
+    enum Tracking {
         // ...
     }
     
-    let states: [Bubbles] = [.done, .done, .inProgress, .error]
+    let states: [Tracking] = [.done, .done, .inProgress, .error]
     
 
-   // Spacing for the Bubbles [o  o  o  o]
+   // Spacing for the Tracking [o  o  o  o]
    var spacing: CGFloat {
       // ...
    }
@@ -48,16 +48,17 @@ struct StateProgress: View {
 see this code on github</a>
 </div>
 
-I often use enums to hold my views properties when I use swiftUI. It's a neat way to throw variables into the same view for a different outcome.
-The fill is just calculating how many lines between the circles there should be
+I've abbreviated the code so it's easier to see, so hopefully you get the idea. I often use enums to hold my views properties when I use swiftUI. It's a neat way to throw variables into the same view for a different outcome.
+The spacing variable is the spacing between the little bubbles for tracking state, while the line length is the amount of line to cut off on the edges.
+
 
 This is the circle part
 
-```code 
+```swift 
 struct StateProgressCirlce: View {
    @Environment(\.colorScheme) var colorScheme
    
-   let state: StateProgress.Bubbles
+   let state: StateProgress.Tracking
    let reader: GeometryProxy
    let size: CGFloat = 25
    
@@ -90,5 +91,8 @@ We do some switching for dark mode colors, but other than that it's pretty strai
 A couple of things to take away if you're not familiar with them:
 - The GeometryProxy is the reader from the GeometryReader in the parent View. You can use those to get the devices size values and other useful information. It's helpful when you need to size UI for multiple different device sizes.
 - @Environment(\.colorScheme) var colorScheme is what we use to read values from the system settings about the users preference for light or dark modes.
+
+In <a href="https://www.pixelper.com/#/blog/status-tracker-p2" style="color: blue; text-decoration: underline;text-decoration-style: dotted;">
+part two</a>, we will add a few touch interactions so a user can update the states.
 
 Let me know if you find this useful, I'd love to hear about any modifications you've made to make it better.
