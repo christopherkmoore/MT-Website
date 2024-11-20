@@ -1,7 +1,7 @@
 
 [
 {
-    "imageUrl": "./blogposts/5/thumbnail.png",
+    "imageUrl": "./blogposts/5/banner.gif",
     "fileUrl": "./blogposts/5/post.txt",
     "imageHeadline": "./blogposts/5/banner.gif",
     "dateMonth": "Nov",
@@ -12,10 +12,10 @@
     "title": "Status Tracker",
     "subSeriesTitle": "Part 2",
     "urlSlug": "status-tracker-p2",
-    "details": "Updating the status tracker to have updatable state"
+    "details": "In part two we cover updating the status tracker to have updatable state. We also swap out the titles to have a description of a state, rather than the progress state."
     },
     {
-    "imageUrl": "./blogposts/4/thumbnail.gif",
+    "imageUrl": "./blogposts/4/banner.png",
     "fileUrl": "./blogposts/4/post.txt",
     "imageHeadline": "./blogposts/4/banner.png",
     "dateMonth": "Nov",
@@ -26,7 +26,7 @@
     "title": "Status Tracker",
     "subSeriesTitle": "Part 1",
     "urlSlug": "status-tracker",
-    "details": "Make a customizable status tracker with SwiftUI"
+    "details": "Make a customizable status tracker with SwiftUI."
     },
     {
     "imageUrl": "./blogposts/3/thumbnail.png",
@@ -69,6 +69,6 @@
         "readTime": "5 min",
         "title": "Collapsable Indicator",
         "urlSlug": "collapsable-indicator",
-        "details": "Build a collapsable indicator in pure SwiftUI"
+        "details": "Build a collapsable indicator in pure SwiftUI."
     }
 ]
