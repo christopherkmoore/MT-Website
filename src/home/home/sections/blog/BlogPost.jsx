@@ -2,8 +2,6 @@
 import React, { useEffect, useState } from "react";
 import { MarkdownRenderer } from "./Markdown";
 import { makeStyles } from '@mui/styles';
-import { Container } from "@mui/material";
-
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   introWrapper: {
