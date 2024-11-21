@@ -1,8 +1,9 @@
-import React from "react";
+import { React, useEffect } from "react";
 import {
   Route,
   HashRouter as Router,
-  Routes
+  Routes,
+  useLocation
 } from "react-router-dom";
 
 import { ThemeProvider } from '@mui/material/styles';
@@ -23,11 +24,45 @@ import { typographyStyles } from './styles/jss/utilities/_typography';
 import "react-perfect-scrollbar/dist/css/styles.css";
 import GlobalCss from "./styles/jss/GlobalCss";
 
-import Home from "./home/Home";
 import BlogLanding from "./home/BlogLanding";
-import MileTracker from "./home/MileTracker";
 import BlogPostPage from "./home/BlogPostPage";
+import Home from "./home/Home";
+import MileTracker from "./home/MileTracker";
+
+// Import the functions you need from the SDKs you need
+import { getAnalytics, logEvent } from "firebase/analytics";
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyD6pDSPFNcAyiDfd9PkbeUZ_zzGQ6pkk0M",
+  authDomain: "website-16efe.firebaseapp.com",
+  projectId: "website-16efe",
+  storageBucket: "website-16efe.firebasestorage.app",
+  messagingSenderId: "473489024447",
+  appId: "1:473489024447:web:9da3c477ebb92e0fd1ed0a",
+  measurementId: "G-0GG4RGT89H"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+function FirebaseAnalytics() {
+  console.log("In FirebaseANalytics compoent")
+
+  const location = useLocation();
+  useEffect(() => {
+        const page_path = location.pathname + location.search;
+        logEvent(analytics, "page_view", { page_path });
+  }, [location]);
+  return null;
+}
 function App() {
+  
   return (
     <ThemeProvider theme={Theme}>
       {variableStyles()}
@@ -40,14 +75,16 @@ function App() {
       {positioningStyles}
       {shadowStyles}
       {spacingStyles}
+      
       <GlobalCss>
         <Scrollbar
           className="h-full-screen scrollable-content"
           option={{ suppressScrollX: true }}
         >
           <Router basename="/">
+          <FirebaseAnalytics />
             <Routes>
-              <Route path="/" element={<Home to="/Home" />} />
+              FirebaseAnalytics<Route path="/" element={<Home to="/Home" />} />
               <Route path="/blog" element={<BlogLanding to="/blog" />} />
               <Route path="/blog/:slug" element={<BlogPostPage to="/blog/:slug" />} />
               {/* <Route path="/MileTracker/privacyPolicy" element={<MileTracker to="/MileTracker" />} />
