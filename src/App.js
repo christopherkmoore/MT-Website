@@ -89,7 +89,7 @@ function App() {
               <Route path="/blog/:slug" element={<BlogPostPage to="/blog/:slug" />} />
               {/* <Route path="/MileTracker/privacyPolicy" element={<MileTracker to="/MileTracker" />} />
               <Route path="/contact" element={<Contact to="/Contact" />} /> */}
-
+              <Route path="/app-ads.txt"/>
               <Route path="/MileTracker" element={<MileTracker to="/MileTracker" />} />
               {/* <Route component={Error} /> */}
             </Routes>
