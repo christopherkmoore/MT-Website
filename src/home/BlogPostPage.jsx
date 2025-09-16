@@ -2,8 +2,8 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import Footer2 from "./sections/Footer2";
 
-import BlogPost from "./home/sections/blog/BlogPost";
-import blogPosts from './home/sections/blog/blogPosts';
+import BlogPost from "./sections/blog/BlogPost";
+import blogPosts from './sections/blog/blogPosts';
 import MTTopBar from "./sections/MTTopBar";
 
 const BlogPostPage = () => {
