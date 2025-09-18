@@ -1,51 +1,52 @@
-# How to Beat Bull$#!t Like This: Building Your Own Small-Scale Online Business
+# An idea for a small scale business while enhancing user privacy.
 
-*Because I'm tired of tech giants treating us like products*
+*Creating alternatives to data-hungry platforms*
 
-Look at this garbage. Just look at it.
+Here's something I see way too often now.
 
-"Add and verify your phone number to continue" — because apparently, we can't use the internet anymore without handing over the keys to our digital lives. And notice that beautiful little disclaimer buried in the fine print? "You agree to receive calls and texts (including pre-recorded or artificial calls) from Indeed... for verification purposes AND as specified in your Communication settings."
+"Add and verify your phone number to continue" has become the new normal across the web. What bothers me isn't just the verification requirement — it's the fine print that follows. Notice how they mention you'll receive calls and texts "for verification purposes AND as specified in your Communication settings."
 
-Translation: "Give us your phone number for this one-time password, and oh by the way, we're going to spam the hell out of you forever. Also, you can't opt out of this until you give it to us first. LOL sorry not sorry."
+So you need to give them your number to proceed, but once you do, they can contact you for marketing purposes too. And you can't adjust those communication settings until after you've already provided the number.
 
-Every phone number collected is another direct line into your pocket. Every verification is another data point sold to the highest bidder. They're not protecting you; they're building a more complete profile to monetize.
+## The Privacy Trade-Off Problem
 
-## Time to Build Something Better
+This represents a bigger trend where platforms ask for personal information under the banner of security, then use it for other purposes. Every phone number becomes a direct marketing channel. Every verification step becomes another data point.
 
-I just bought a subscription to Claude (yeah, I'm putting my money where my mouth is), and I'm ready to start hacking together something that doesn't treat users like walking ATMs.
+It's presented as "this helps prevent fraudulent activity and enhances your experience," but the reality is more complex. Yes, verification can improve security. But it also creates a more complete user profile that has commercial value.
 
-The plan? Build a small-scale online business that:
-- Respects user privacy by default
-- Doesn't harvest unnecessary personal data
-- Makes money from value, not surveillance
-- Proves you can build something profitable at around $7.99 without selling your users' souls
+## Building Something Different
 
-## Why Small-Scale Beats Big Tech
+I recently got a Claude subscription and I'm excited to start building an alternative approach. My goal is to create a small online business that demonstrates you can be profitable while respecting user privacy.
 
-Here's the thing about building small: you don't need to extract maximum value from every user interaction. You don't need to justify your existence to shareholders who demand 20% growth year over year. You can actually build something useful and charge a fair price for it.
+The target? Something useful at around $7.99 that makes money from the value it provides, not from harvesting user data.
 
-While Big Tech burns through billions trying to figure out how to make AI profitable, small-scale builders can:
+## Why Small-Scale Works
 
-1. **Move fast without breaking democracy** — Build useful tools without worrying about congressional hearings
-2. **Charge honest prices** — $7.99 for real value beats "free" with your data as payment
-3. **Stay human-sized** — You can actually know your users and build for them, not against them
+Building small has advantages that get overlooked:
 
-## The $7.99 Revolution
+- **Sustainable economics** — You don't need massive scale to be profitable at reasonable prices
+- **Direct relationships** — You can actually understand your users' needs without analytics dashboards
+- **Clear value exchange** — People pay money, you provide service, everyone knows where they stand
+- **Privacy by design** — When you're not selling data, you don't need to collect it
 
-Why $7.99? Because it's the price of a decent coffee and pastry. It's what Netflix used to cost before they decided they needed to own Hollywood. It's honest money for honest work.
+## The $7.99 Philosophy
 
-When your business model isn't "harvest all the data and figure out monetization later," you can actually price things reasonably. No venture capital demanding 10x returns. No pressure to "scale or die." Just build something people want and charge them fairly for it.
+This price point represents something important: fair exchange for real value. It's what you might spend on lunch, and it's sustainable for both creators and users.
 
-## What's Next?
+When your business model is "provide value, charge fairly" instead of "capture users, monetize later," you can actually price things reasonably from day one.
 
-I'm documenting this whole journey — the wins, the failures, the moments when I want to throw my laptop out the window. Because someone needs to prove that you can build profitable tech without becoming the villain.
+## What I'm Building
 
-The internet doesn't have to be a surveillance hellscape where every interaction is monetized. We can build better. We can charge fairly. We can respect privacy.
+I'm documenting this process of creating a profitable small business that doesn't rely on surveillance capitalism. The goal is to prove that respectful, sustainable tech businesses are not only possible but can be more satisfying to run.
 
-And we can definitely beat bull$#!t like this.
+There's room for platforms that ask for only the information they actually need, that charge transparent prices, and that treat users as customers rather than products.
+
+## Moving Forward
+
+The internet doesn't have to work the way these screenshots suggest. We can build tools that respect privacy while still being secure. We can charge fair prices for real value. We can create sustainable businesses without becoming data brokers.
+
+I'll be sharing updates on what I'm building and the lessons learned along the way.
 
 ---
 
-*Follow along as I build something that doesn't suck. No phone number required.*
-
-**Update coming soon:** What I'm building and how you can build your own escape route from Big Tech's data mines.
+*Building better tools, one honest transaction at a time.*
