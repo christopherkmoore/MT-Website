@@ -1,0 +1,51 @@
+# How to Beat Bull$#!t Like This: Building Your Own Small-Scale Online Business
+
+*Because I'm tired of tech giants treating us like products*
+
+Look at this garbage. Just look at it.
+
+"Add and verify your phone number to continue" — because apparently, we can't use the internet anymore without handing over the keys to our digital lives. And notice that beautiful little disclaimer buried in the fine print? "You agree to receive calls and texts (including pre-recorded or artificial calls) from Indeed... for verification purposes AND as specified in your Communication settings."
+
+Translation: "Give us your phone number for this one-time password, and oh by the way, we're going to spam the hell out of you forever. Also, you can't opt out of this until you give it to us first. LOL sorry not sorry."
+
+Every phone number collected is another direct line into your pocket. Every verification is another data point sold to the highest bidder. They're not protecting you; they're building a more complete profile to monetize.
+
+## Time to Build Something Better
+
+I just bought a subscription to Claude (yeah, I'm putting my money where my mouth is), and I'm ready to start hacking together something that doesn't treat users like walking ATMs.
+
+The plan? Build a small-scale online business that:
+- Respects user privacy by default
+- Doesn't harvest unnecessary personal data
+- Makes money from value, not surveillance
+- Proves you can build something profitable at around $7.99 without selling your users' souls
+
+## Why Small-Scale Beats Big Tech
+
+Here's the thing about building small: you don't need to extract maximum value from every user interaction. You don't need to justify your existence to shareholders who demand 20% growth year over year. You can actually build something useful and charge a fair price for it.
+
+While Big Tech burns through billions trying to figure out how to make AI profitable, small-scale builders can:
+
+1. **Move fast without breaking democracy** — Build useful tools without worrying about congressional hearings
+2. **Charge honest prices** — $7.99 for real value beats "free" with your data as payment
+3. **Stay human-sized** — You can actually know your users and build for them, not against them
+
+## The $7.99 Revolution
+
+Why $7.99? Because it's the price of a decent coffee and pastry. It's what Netflix used to cost before they decided they needed to own Hollywood. It's honest money for honest work.
+
+When your business model isn't "harvest all the data and figure out monetization later," you can actually price things reasonably. No venture capital demanding 10x returns. No pressure to "scale or die." Just build something people want and charge them fairly for it.
+
+## What's Next?
+
+I'm documenting this whole journey — the wins, the failures, the moments when I want to throw my laptop out the window. Because someone needs to prove that you can build profitable tech without becoming the villain.
+
+The internet doesn't have to be a surveillance hellscape where every interaction is monetized. We can build better. We can charge fairly. We can respect privacy.
+
+And we can definitely beat bull$#!t like this.
+
+---
+
+*Follow along as I build something that doesn't suck. No phone number required.*
+
+**Update coming soon:** What I'm building and how you can build your own escape route from Big Tech's data mines.

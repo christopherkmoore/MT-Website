@@ -1,6 +1,20 @@
 
 [
 {
+    "imageUrl": "./blogposts/6/image.jpg",
+    "fileUrl": "./blogposts/6/post.txt",
+    "imageHeadline": "./blogposts/6/image.jpg",
+    "dateMonth": "Sep",
+    "dateDay": "17",
+    "dateYear": "2025",
+    "date": "September 17, 2025",
+    "readTime": "6 min",
+    "title": "How to Beat Bull$#!t Like This",
+    "subSeriesTitle": "Building Your Own Small-Scale Online Business",
+    "urlSlug": "beat-bullshit-small-scale-business",
+    "details": "Because I'm tired of tech giants treating us like products. Time to build something better at $7.99."
+    },
+{
     "imageUrl": "./blogposts/5/banner.gif",
     "fileUrl": "./blogposts/5/post.txt",
     "imageHeadline": "./blogposts/5/banner.gif",

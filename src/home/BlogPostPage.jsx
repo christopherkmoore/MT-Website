@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import Footer2 from "./sections/Footer2";
 
 import BlogPost from "./sections/blog/BlogPost";
-import blogPosts from './sections/blog/blogPosts';
+import blogPosts from './sections/blog/blogPosts.jsx';
 import MTTopBar from "./sections/MTTopBar";
 
 const BlogPostPage = () => {
