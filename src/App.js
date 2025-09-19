@@ -32,8 +32,9 @@ import ProductsPage from "./home/ProductsPage";
 import ScrollToTop from "./components/ScrollToTop";
 
 // Import the functions you need from the SDKs you need
-import { getAnalytics, logEvent } from "firebase/analytics";
+import { getAnalytics } from "firebase/analytics";
 import { initializeApp } from "firebase/app";
+import advancedAnalytics from "./utils/AdvancedAnalytics";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -51,20 +52,38 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+getAnalytics(app);
+
+// Initialize advanced analytics after Firebase is ready
+advancedAnalytics.initialize();
 
 function FirebaseAnalytics() {
-  console.log("In FirebaseANalytics compoent")
-
   const location = useLocation();
+
   useEffect(() => {
-        const page_path = location.pathname + location.search;
-        logEvent(analytics, "page_view", { page_path });
+    // Track page view using the advanced analytics class
+    const cleanupEngagement = advancedAnalytics.trackPageView(location);
+
+    // Return the cleanup function for engagement tracking
+    return cleanupEngagement;
   }, [location]);
+
+  useEffect(() => {
+    // Initialize scroll tracking using the advanced analytics class
+    const cleanupScroll = advancedAnalytics.initializeScrollTracking(location);
+
+    // Return the cleanup function for scroll tracking
+    return cleanupScroll;
+  }, [location]);
+
   return null;
 }
 function App() {
-  
+  // Initialize session tracking
+  useEffect(() => {
+    advancedAnalytics.initializeSession();
+  }, []);
+
   return (
     <ThemeProvider theme={Theme}>
       {variableStyles()}

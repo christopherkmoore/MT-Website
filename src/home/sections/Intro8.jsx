@@ -5,9 +5,9 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 
-const strengths = ["Future proof your app with my excellence in SwiftUI & Jetpack Compose.",
-  "Stay up-to-date with the latest design and mobile trends.",
-  "Always be on the cutting edge with high-performance applications."
+const strengths = ["Expert in React, SwiftUI, Jetpack Compose for modern mobile app development",
+  "Specialized in responsive web design and mobile-first development approaches",
+  "Full-stack development with focus on performance optimization and user experience"
 ]
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
@@ -139,8 +139,9 @@ const Intro8 = () => {
               <div className="relative">
                 <img
                   src="/assets/images/profile.jpeg"
-                  alt="Christopher Moore"
+                  alt="Christopher Moore - Expert Software Developer and Tech Enthusiast with 10+ years experience"
                   className="w-full block"
+                  loading="lazy"
                   style={{
                     borderRadius: '50%',
                     aspectRatio: '1/1',
@@ -166,10 +167,10 @@ const Intro8 = () => {
               Expert Developer and Tech Enthusiast.
             </h4>
             <p className={`my-8 max-w-400 ${classes.heroText}`}>
-              With 10+ years of experience in developing software,
-              I bring a unique blend of creativity, technical expertise, and passion
-              to every project I undertake. My specialties include mobile app design, development,
-              and deployment on mobile platforms.
+              With 10+ years of experience in developing innovative software solutions,
+              I specialize in React development, iOS app development, Android app development,
+              and full-stack web development. I bring cutting-edge technical expertise and creative
+              problem-solving to every mobile app and web development project.
             </p>
             {strengths.map((item) => (
               <div key={item} className="flex items-center">

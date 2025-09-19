@@ -4,6 +4,7 @@ import React from "react";
 import GithubIcon from "../common/icons/GithubIcon";
 import LinkedinIcon from "../common/icons/LinkedinIcon";
 import MediumIcon from "../common/icons/MediumIcon";
+import advancedAnalytics from "../../utils/AdvancedAnalytics";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   footer: {
@@ -221,6 +222,7 @@ const Footer2 = () => {
                   href="https://github.com/christopherkmoore"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => advancedAnalytics.trackSocialMediaClick('github', 'click', 'footer')}
                 >
                   <GithubIcon />
                 </IconButton>
@@ -229,6 +231,7 @@ const Footer2 = () => {
                   href="https://www.linkedin.com/in/christopher-moore1/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => advancedAnalytics.trackSocialMediaClick('linkedin', 'click', 'footer')}
                 >
                   <LinkedinIcon />
                 </IconButton>
@@ -237,6 +240,7 @@ const Footer2 = () => {
                   href="https://medium.com/@christopherkmoore"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => advancedAnalytics.trackSocialMediaClick('medium', 'click', 'footer')}
                 >
                   <MediumIcon />
                 </IconButton>
@@ -247,6 +251,7 @@ const Footer2 = () => {
                 className={classes.coffeeLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => advancedAnalytics.trackExternalLinkClick('https://www.paypal.com/donate/?business=P5YETTFZG73JG&no_recurring=0&currency_code=USD', 'Buy me a coffee', 'footer')}
               >
                 ☕ Buy me a coffee
               </a>
@@ -265,6 +270,7 @@ const Footer2 = () => {
                 className={classes.linkItem}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => advancedAnalytics.trackExternalLinkClick('https://staging.d1spf6k7qx7ko1.amplifyapp.com/', 'Contact Me', 'footer')}
               >
                 Contact Me
               </a>
@@ -274,6 +280,7 @@ const Footer2 = () => {
                 className={classes.linkItem}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => advancedAnalytics.trackExternalLinkClick('https://none.d1kcel26541ny4.amplifyapp.com/', 'Privacy Policy', 'footer')}
               >
                 Privacy Policy
               </a>

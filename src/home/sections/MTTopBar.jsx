@@ -1,9 +1,10 @@
-import { AppBar, Toolbar, Typography, IconButton, Drawer, List, ListItem, ListItemText, useMediaQuery } from "@mui/material";
+import { AppBar, Toolbar, Typography, IconButton, Drawer, List, ListItem, ListItemText } from "@mui/material";
 import { makeStyles } from '@mui/styles';
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import advancedAnalytics from "../../utils/AdvancedAnalytics";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   appBar: {
@@ -131,7 +132,6 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
 const TopBar11 = (props) => {
   const classes = useStyles();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const isMobile = useMediaQuery((theme) => theme.breakpoints.down('md'));
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -157,7 +157,11 @@ const TopBar11 = (props) => {
       <List>
         {navigationItems.map((item) => (
           <ListItem key={item.text} onClick={handleDrawerToggle}>
-            <NavLink to={item.path} className={classes.drawerNavLink}>
+            <NavLink
+              to={item.path}
+              className={classes.drawerNavLink}
+              onClick={() => advancedAnalytics.trackButtonClick(`nav_${item.text.toLowerCase()}`, 'topbar_mobile')}
+            >
               <ListItemText primary={item.text} />
             </NavLink>
           </ListItem>
@@ -182,6 +186,7 @@ const TopBar11 = (props) => {
                 key={item.text}
                 to={item.path}
                 className={classes.navLink}
+                onClick={() => advancedAnalytics.trackButtonClick(`nav_${item.text.toLowerCase()}`, 'topbar_desktop')}
               >
                 {item.text}
               </NavLink>

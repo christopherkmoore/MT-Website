@@ -124,7 +124,8 @@ const Feature5 = () => {
               <img
                 className={classes.musicImage}
                 src="/assets/images/mt-trends-dark-full-1.png"
-                alt="mobile-1"
+                alt="MileTracker+ Trends Dashboard - Analytics and usage patterns for mobile tracking"
+                loading="lazy"
               />
             </div>
           </Grid>

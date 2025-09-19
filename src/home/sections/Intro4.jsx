@@ -2,6 +2,7 @@ import { Button, Grid } from "@mui/material";
 import { makeStyles } from '@mui/styles';
 import React from "react";
 import AppleIcon from "../common/icons/AppleIcon";
+import advancedAnalytics from "../../utils/AdvancedAnalytics";
 
 const useStyles = makeStyles((theme) => ({
   themeText: {
@@ -74,7 +75,8 @@ const Intro4 = () => {
               <img
                 className={classes.musicImage}
                 src="/assets/images/mt-home-dark-full-1.png"
-                alt="mobile-1"
+                alt="MileTracker+ Mobile App - GPS tracking and mileage recording interface"
+                loading="lazy"
               />
             </div>
           </Grid>
@@ -110,6 +112,7 @@ const Intro4 = () => {
                   className="px-6 mb-4 rounded py-3"
                   variant="contained"
                   color="primary"
+                  onClick={() => advancedAnalytics.trackAppStoreClick('app_store', 'MileTracker+', 'intro4')}
                 >
                   <AppleIcon fontSize="small" className="mr-3" />
                   <a href="https://apps.apple.com/us/app/miletracker/id6504142555">

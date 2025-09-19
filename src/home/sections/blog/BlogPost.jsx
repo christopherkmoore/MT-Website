@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { MarkdownRenderer } from "./Markdown";
 import { makeStyles } from '@mui/styles';
+import advancedAnalytics from "../../../utils/AdvancedAnalytics";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   introWrapper: {
@@ -46,6 +47,14 @@ const BlogPost = ({ post }) => {
   useEffect(() => {
     getResource(`${post.fileUrl}`).then(setText).catch(console.error);
   }, [post.fileUrl]);
+
+  useEffect(() => {
+    // Track blog post view and read time using the advanced analytics class
+    const cleanupReadTime = advancedAnalytics.trackBlogPostView(post);
+
+    // Return the cleanup function for read time tracking
+    return cleanupReadTime;
+  }, [post]);
 
   return (
     <section className="section section-bg-light-primary" id="blogPost">

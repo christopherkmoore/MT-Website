@@ -3,6 +3,7 @@ import { makeStyles } from '@mui/styles';
 import React from "react";
 import GithubIcon from "../common/icons/GithubIcon";
 import LinkedinIcon from "../common/icons/LinkedinIcon";
+import advancedAnalytics from "../../utils/AdvancedAnalytics";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   section: {
@@ -263,8 +264,9 @@ const Contact = () => {
               <div className={classes.profileContainer}>
                 <img
                   src="/assets/images/profile.jpeg"
-                  alt="Christopher Moore"
+                  alt="Christopher Moore - Professional Software Developer and Tech Expert"
                   className={classes.profileImage}
+                  loading="lazy"
                 />
                 <div className={classes.statusIndicator} title="Available for new projects" />
               </div>
@@ -286,6 +288,7 @@ const Contact = () => {
                 <a
                   href="mailto:christopherkmoore1@gmail.com"
                   className={`${classes.contactMethod} ${classes.preferredMethod}`}
+                  onClick={() => advancedAnalytics.trackContactInteraction('view_email', 'email')}
                 >
                   <div className={`${classes.contactIcon} ${classes.emailIcon}`}>📧</div>
                   <div className={classes.contactText}>
@@ -301,6 +304,7 @@ const Contact = () => {
                   className={classes.contactMethod}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => advancedAnalytics.trackContactInteraction('click_github', 'github')}
                 >
                   <GithubIcon className={`${classes.contactIcon} ${classes.githubIcon}`} />
                   <div className={classes.contactText}>
@@ -314,6 +318,7 @@ const Contact = () => {
                   className={classes.contactMethod}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => advancedAnalytics.trackContactInteraction('click_linkedin', 'linkedin')}
                 >
                   <LinkedinIcon className={`${classes.contactIcon} ${classes.linkedinIcon}`} />
                   <div className={classes.contactText}>
