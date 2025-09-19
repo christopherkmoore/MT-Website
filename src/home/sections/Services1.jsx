@@ -3,45 +3,64 @@ import React from "react";
 import { Card, CardContent, Grid, Icon } from "@mui/material";
 import { makeStyles } from '@mui/styles';
 
-import clsx from "clsx";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
+  section: {
+    padding: '6rem 0',
+    background: 'rgba(15, 23, 42, 0.6)',
+  },
   card: {
-    background: 'rgba(255, 255, 255, 0.05)',
+    background: 'rgba(30, 41, 59, 0.7)',
     backdropFilter: 'blur(10px)',
-    border: "2px solid rgba(255, 0, 128, 0.3)",
-    borderRadius: '15px',
-    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
+    border: '1px solid rgba(148, 163, 184, 0.2)',
+    borderRadius: '16px',
+    padding: '1rem',
+    boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2)',
     transition: 'all 0.3s ease',
+    height: '100%',
     "& .icon": {
-      fontSize: 64,
-      color: "#00ffff",
-      filter: 'drop-shadow(0 0 10px #00ffff)',
+      fontSize: 40,
+      color: "#3b82f6",
+      marginBottom: '1rem',
     },
     "&:hover": {
-      border: "2px solid #ff0080",
-      boxShadow: '0 0 25px rgba(255, 0, 128, 0.5)',
-      transform: 'translateY(-5px)',
+      boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3)',
+      transform: 'translateY(-2px)',
+      borderColor: 'rgba(59, 130, 246, 0.4)',
       "& .icon": {
-        color: "#ff0080",
-        filter: 'drop-shadow(0 0 15px #ff0080)',
+        color: "#60a5fa",
       },
     },
   },
   sectionTitle: {
-    background: 'linear-gradient(45deg, #ff0080, #0080ff)',
-    backgroundClip: 'text',
-    WebkitBackgroundClip: 'text',
-    WebkitTextFillColor: 'transparent',
-    textShadow: '0 0 20px rgba(255, 0, 128, 0.3)',
+    color: '#e2e8f0',
+    fontWeight: '700',
+    fontSize: '2.5rem',
+    marginBottom: '1.5rem',
+    lineHeight: '1.2',
   },
   serviceTitle: {
-    color: '#ffffff',
-    textShadow: '0 0 10px rgba(255, 255, 255, 0.3)',
+    color: '#e2e8f0',
+    fontWeight: '600',
+    fontSize: '1.25rem',
+    marginBottom: '0.75rem',
+    paddingBottom: '0.75rem',
+    borderBottom: '2px solid #e2e8f0',
+    position: 'relative',
   },
   serviceDescription: {
-    color: '#e0e0e0',
-    lineHeight: '1.5',
+    color: '#94a3b8',
+    lineHeight: '1.6',
+    fontSize: '1rem',
+  },
+  headerDescription: {
+    color: '#94a3b8',
+    fontSize: '1.125rem',
+    lineHeight: '1.7',
+    marginBottom: '3rem',
+    maxWidth: '600px',
+    margin: '0 auto 3rem',
+    textAlign: 'center',
   },
 }));
 
@@ -77,31 +96,26 @@ const Services1 = () => {
   ];
 
   return (
-    <section className="section bg-light-gray" id="service1">
+    <section className={classes.section} id="service1">
       <div className="container">
-        <div className="section__header">
-          <h2 className={classes.sectionTitle}>My Services ⚡</h2>
-          <p className={classes.serviceDescription}>
+        <div className="text-center mb-16">
+          <h2 className={classes.sectionTitle}>My Services</h2>
+          <p className={classes.headerDescription}>
             Expertise from start to finish across all ends of technical development.
             Whatever you need, I have the expertise.
           </p>
         </div>
 
-        <Grid container spacing={3} alignContent="stretch">
+        <Grid container spacing={4} alignContent="stretch">
           {serviceList.map((service) => (
-            <Grid item md={3} sm={6} key={service.title}>
-              <Card className={clsx("card h-full", classes.card)}>
-                <CardContent className="flex-column justify-between min-h-full">
-                  <div className="flex-grow">
-                    <div className="text-center mb-4">
-                      <Icon className="icon">{service.icon}</Icon>
-                    </div>
-                    <h3 className={`font-light text-24 ${classes.serviceTitle}`}>{service.title}</h3>
-                    <p className={classes.serviceDescription}>{service.text}</p>
+            <Grid item md={3} sm={6} xs={12} key={service.title}>
+              <Card className={classes.card} elevation={0}>
+                <CardContent>
+                  <div className="text-center mb-4">
+                    <Icon className="icon">{service.icon}</Icon>
                   </div>
-                  {/* <div className="pt-4">
-                    <Button>READ MORE</Button>
-                  </div> */}
+                  <h3 className={classes.serviceTitle}>{service.title}</h3>
+                  <p className={classes.serviceDescription}>{service.text}</p>
                 </CardContent>
               </Card>
             </Grid>

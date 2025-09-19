@@ -89,6 +89,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     borderRadius: '8px',
     color: '#ffffff',
     fontWeight: '600',
+    padding: "12px 30px",
     boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
     transition: 'all 0.3s ease',
     '&:hover': {
@@ -175,20 +176,10 @@ const Intro8 = () => {
               <div className="mb-4">
                 <Button
                   variant="contained"
-                  className={`px-2px py-2px ${classes.professionalButton}`}
+                  className={classes.professionalButton}
                 >
-                  <NavLink className="pl-8 pr-7" to="/Contact">
+                  <NavLink to="/Contact" style={{ color: 'inherit', textDecoration: 'none' }}>
                     Hire me 🚀
-                  </NavLink>
-                </Button>
-              </div>
-              <div>
-                <Button
-                  variant="outlined"
-                  className={`px-2px py-2px ${classes.professionalButtonSecondary}`}
-                >
-                  <NavLink className="pl-8 pr-7" to="/MileTracker">
-                    See products ✨
                   </NavLink>
                 </Button>
               </div>

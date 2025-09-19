@@ -1,5 +1,5 @@
 import { createTheme } from '@mui/material/styles';
-import { red, orange, indigo } from '@mui/material/colors';
+import { red } from '@mui/material/colors';
 
 const miamiViceColors = {
   neonPink: '#ff0080',

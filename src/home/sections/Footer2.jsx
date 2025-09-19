@@ -1,4 +1,4 @@
-import { Box, Container, Typography, IconButton, Grid, Link } from "@mui/material";
+import { Box, Container, Typography, IconButton, Grid } from "@mui/material";
 import { makeStyles } from '@mui/styles';
 import React from "react";
 import GithubIcon from "../common/icons/GithubIcon";
@@ -24,16 +24,29 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
   },
   brandSection: {
     textAlign: 'left',
+    background: 'rgba(30, 41, 59, 0.5)',
+    borderRadius: '12px',
+    border: '1px solid rgba(148, 163, 184, 0.2)',
+    padding: '2rem',
+    transition: 'all 0.3s ease',
+    '&:hover': {
+      background: 'rgba(30, 41, 59, 0.7)',
+      borderColor: 'rgba(59, 130, 246, 0.3)',
+    },
     [theme.breakpoints.down('md')]: {
       textAlign: 'center',
       marginBottom: '3rem',
     },
   },
   name: {
-    color: '#e2e8f0',
-    fontWeight: '700',
-    fontSize: '1.75rem',
+    background: 'linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #1d4ed8 100%)',
+    backgroundClip: 'text',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    fontWeight: '800',
+    fontSize: '2rem',
     marginBottom: '0.5rem',
+    letterSpacing: '-0.025em',
   },
   tagline: {
     color: '#94a3b8',
@@ -82,6 +95,16 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
   },
   contactSection: {
     textAlign: 'left',
+    background: 'rgba(30, 41, 59, 0.5)',
+    borderRadius: '12px',
+    border: '1px solid rgba(148, 163, 184, 0.2)',
+    padding: '2rem',
+    height: '100%',
+    transition: 'all 0.3s ease',
+    '&:hover': {
+      background: 'rgba(30, 41, 59, 0.7)',
+      borderColor: 'rgba(59, 130, 246, 0.3)',
+    },
     [theme.breakpoints.down('md')]: {
       textAlign: 'center',
       marginBottom: '3rem',
@@ -110,6 +133,16 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
   },
   linksSection: {
     textAlign: 'left',
+    background: 'rgba(30, 41, 59, 0.5)',
+    borderRadius: '12px',
+    border: '1px solid rgba(148, 163, 184, 0.2)',
+    padding: '2rem',
+    height: '100%',
+    transition: 'all 0.3s ease',
+    '&:hover': {
+      background: 'rgba(30, 41, 59, 0.7)',
+      borderColor: 'rgba(59, 130, 246, 0.3)',
+    },
     [theme.breakpoints.down('md')]: {
       textAlign: 'center',
     },
@@ -145,45 +178,61 @@ const Footer2 = () => {
       <Container maxWidth="lg">
         <Grid container spacing={4}>
           {/* Brand Section */}
-          <Grid item xs={12} md={6}>
-            <div className={classes.brandSection}>
-              <Typography className={classes.name}>
-                Christopher Moore
-              </Typography>
-              <Typography className={classes.tagline}>
-                Building innovative mobile applications with cutting-edge technology.
-                Passionate about creating exceptional user experiences.
-              </Typography>
+          <Grid item xs={12} md={8}>
+            <div className={classes.brandSection} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+              <div style={{ flex: 1 }}>
+                <Typography className={classes.name}>
+                  Christopher Moore
+                </Typography>
+                <Typography className={classes.tagline}>
+                  Building innovative software with cutting-edge technology.
+                  Passionate about creating exceptional user experiences.
+                </Typography>
+              </div>
 
-            </div>
-          </Grid>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '1rem' }}>
+                <Box className={classes.socialContainer} style={{ justifyContent: 'flex-end', margin: 0 }}>
+                  <IconButton
+                    className={classes.socialIcon}
+                    href="https://github.com/christopherkmoore"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <GithubIcon />
+                  </IconButton>
+                  <IconButton
+                    className={classes.socialIcon}
+                    href="https://www.linkedin.com/in/christopher-moore1/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <LinkedinIcon />
+                  </IconButton>
+                  <IconButton
+                    className={classes.socialIcon}
+                    href="https://medium.com/@christopherkmoore"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <MediumIcon />
+                  </IconButton>
+                </Box>
 
-          {/* Contact Section */}
-          <Grid item xs={12} md={3}>
-            <div className={classes.contactSection}>
-              <Typography className={classes.sectionTitle}>
-                Contact
-              </Typography>
-
-              <div className={classes.contactItem}>
-                <span className={classes.contactIcon}>📧</span>
                 <a
-                  href="mailto:christopherkmoore1@gmail.com"
-                  className={classes.contactLink}
+                  href="https://www.paypal.com/donate/?business=P5YETTFZG73JG&no_recurring=0&currency_code=USD"
+                  className={classes.coffeeLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  christopherkmoore1@gmail.com
+                  ☕ Buy me a coffee
                 </a>
               </div>
 
-              <div className={classes.contactItem}>
-                <span className={classes.contactIcon}>🌴</span>
-                <span>San Diego, California</span>
-              </div>
             </div>
           </Grid>
 
           {/* Links Section */}
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} md={4}>
             <div className={classes.linksSection}>
               <Typography className={classes.sectionTitle}>
                 Links
@@ -212,44 +261,6 @@ const Footer2 = () => {
 
         {/* Bottom Section */}
         <div className={classes.bottomSection}>
-          <Box className={classes.socialContainer} style={{ justifyContent: 'center', marginBottom: '2rem' }}>
-            <IconButton
-              className={classes.socialIcon}
-              href="https://github.com/christopherkmoore"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <GithubIcon />
-            </IconButton>
-            <IconButton
-              className={classes.socialIcon}
-              href="https://www.linkedin.com/in/christopher-moore1/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <LinkedinIcon />
-            </IconButton>
-            <IconButton
-              className={classes.socialIcon}
-              href="https://medium.com/@christopherkmoore"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <MediumIcon />
-            </IconButton>
-          </Box>
-
-          <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-            <a
-              href="https://www.paypal.com/donate/?business=P5YETTFZG73JG&no_recurring=0&currency_code=USD"
-              className={classes.coffeeLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              ☕ Buy me a coffee
-            </a>
-          </div>
-
           <Typography className={classes.copyright}>
             © {new Date().getFullYear()} Christopher Moore. All rights reserved.
           </Typography>

@@ -1,7 +1,7 @@
-import { Button, Grid, Card, CardContent, Box } from "@mui/material";
+import { Button, Grid, Card, CardContent, ToggleButton, ToggleButtonGroup } from "@mui/material";
 import { makeStyles } from '@mui/styles';
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
@@ -14,9 +14,11 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     marginBottom: "3rem",
     boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2)',
     transition: 'all 0.3s ease',
+    cursor: 'pointer',
     '&:hover': {
       boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3)',
       transform: 'translateY(-2px)',
+      borderColor: 'rgba(59, 130, 246, 0.4)',
     },
   },
   projectTitle: {
@@ -109,10 +111,41 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
       transform: "translateY(-1px)",
     },
   },
+  toggleContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    marginBottom: '3rem',
+  },
+  toggleGroup: {
+    background: 'rgba(30, 41, 59, 0.7)',
+    borderRadius: '12px',
+    border: '1px solid rgba(148, 163, 184, 0.2)',
+    padding: '4px',
+  },
+  toggleButton: {
+    border: 'none !important',
+    borderRadius: '8px !important',
+    color: '#94a3b8',
+    fontWeight: '600',
+    padding: '12px 24px',
+    transition: 'all 0.3s ease',
+    '&.Mui-selected': {
+      background: 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)',
+      color: '#ffffff',
+      boxShadow: '0 2px 4px rgba(59, 130, 246, 0.3)',
+    },
+    '&:hover': {
+      color: '#e2e8f0',
+    },
+  },
 }));
 
-const Gallery1 = () => {
+const Gallery1 = ({ isProductsPage = false }) => {
   const classes = useStyles();
+  const navigate = useNavigate();
+
+  // Default to mile-tracker when on products page, privacy-otp when on home page
+  const [selectedProduct, setSelectedProduct] = useState(isProductsPage ? 'mile-tracker' : 'privacy-otp');
 
   const privacyOtpImages = [
     {
@@ -150,9 +183,49 @@ const Gallery1 = () => {
     },
   ];
 
-  const renderProjectSection = (title, description, images, buttonText, buttonLink, isEven, useLargeCards = false) => (
-    <Card className={classes.projectCard}>
-      <CardContent>
+  const handleProductChange = (event, newProduct) => {
+    if (newProduct !== null) {
+      setSelectedProduct(newProduct);
+    }
+  };
+
+  const getCurrentProduct = () => {
+    if (selectedProduct === 'privacy-otp') {
+      return {
+        title: "Privacy OTP",
+        description: "A secure one-time password generator focused on privacy and security.",
+        images: privacyOtpImages,
+        buttonText: "READ MORE",
+        buttonLink: "/Products/PrivacyOTP",
+        useLargeCards: false
+      };
+    } else {
+      return {
+        title: "Mile Tracker+",
+        description: "Comprehensive mileage tracking solution for business and personal use.",
+        images: mileTrackerImages,
+        buttonText: "READ MORE",
+        buttonLink: "/Products/MileTracker",
+        useLargeCards: true
+      };
+    }
+  };
+
+  const renderProjectSection = (title, description, images, buttonText, buttonLink, isEven, useLargeCards = false) => {
+    const handleCardClick = () => {
+      if (!isProductsPage) {
+        // Only navigate when on home page
+        if (title === "Privacy OTP") {
+          navigate("/Products/PrivacyOTP");
+        } else if (title === "Mile Tracker") {
+          navigate("/Products/MileTracker");
+        }
+      }
+    };
+
+    return (
+      <Card className={classes.projectCard} onClick={handleCardClick}>
+        <CardContent>
         <h2 className={classes.projectTitle}>{title}</h2>
         <p className={classes.projectDescription}>{description}</p>
 
@@ -182,39 +255,82 @@ const Gallery1 = () => {
             </Button>
           </div>
         )}
-      </CardContent>
-    </Card>
-  );
+        </CardContent>
+      </Card>
+    );
+  };
+
+  const currentProduct = getCurrentProduct();
 
   return (
     <section className="section" id="gallery1">
       <div className="container">
         <div className="mb-16">
-          <h1 className="font-normal text-44 mt-0">My Works And Portfolios</h1>
+          <h1 className="font-normal text-44 mt-0">
+            {isProductsPage ? "My Products" : "My Works And Portfolios"}
+          </h1>
           <p className="max-w-400 mb-16">
-            Here's some of the latest for what I've been working on --
-            Let's see if we can build something together!
+            {isProductsPage
+              ? "Explore my latest software products and applications designed to solve real-world problems."
+              : "Here's some of the latest for what I've been working on -- Let's see if we can build something together!"
+            }
           </p>
         </div>
 
-        {renderProjectSection(
-          "Privacy OTP",
-          "A secure one-time password generator focused on privacy and security.",
-          privacyOtpImages,
-          "LEARN MORE",
-          null,
-          false,
-          false
+        {isProductsPage && (
+          <div className={classes.toggleContainer}>
+            <ToggleButtonGroup
+              value={selectedProduct}
+              exclusive
+              onChange={handleProductChange}
+              className={classes.toggleGroup}
+            >
+              <ToggleButton value="mile-tracker" className={classes.toggleButton}>
+                Mile Tracker+
+              </ToggleButton>
+              <ToggleButton value="privacy-otp" className={classes.toggleButton}>
+                Privacy OTP
+              </ToggleButton>
+            </ToggleButtonGroup>
+          </div>
         )}
 
-        {renderProjectSection(
-          "Mile Tracker",
-          "Comprehensive mileage tracking solution for business and personal use.",
-          mileTrackerImages,
-          "READ MORE",
-          "/MileTracker",
-          true,
-          true
+        {isProductsPage ? (
+          <Grid container spacing={3}>
+            {currentProduct.images.map((item, ind) => (
+              <Grid key={ind} item lg={4} md={4} sm={6} xs={12}>
+                <div className={currentProduct.useLargeCards ? classes.cardHolderLarge : classes.cardHolder}>
+                  <img className={classes.cardImage} src={item.image} alt={item.title} />
+                  <div className={classes.cardOverlay}>
+                    <h3 className="m-0">{item.title}</h3>
+                    <p className="text-inherit">{item.subtitle}</p>
+                  </div>
+                </div>
+              </Grid>
+            ))}
+          </Grid>
+        ) : (
+          <>
+            {renderProjectSection(
+              "Privacy OTP",
+              "A secure one-time password generator focused on privacy and security.",
+              privacyOtpImages,
+              "READ MORE",
+              "/Products/PrivacyOTP",
+              false,
+              false
+            )}
+
+            {renderProjectSection(
+              "Mile Tracker",
+              "Comprehensive mileage tracking solution for business and personal use.",
+              mileTrackerImages,
+              "READ MORE",
+              "/Products/MileTracker",
+              true,
+              true
+            )}
+          </>
         )}
       </div>
     </section>

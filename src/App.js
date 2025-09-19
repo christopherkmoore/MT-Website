@@ -26,8 +26,10 @@ import GlobalCss from "./styles/jss/GlobalCss";
 
 import BlogLanding from "./home/BlogLanding";
 import BlogPostPage from "./home/BlogPostPage";
+import ContactPage from "./home/ContactPage";
 import Home from "./home/Home";
-import MileTracker from "./home/MileTracker";
+import ProductsPage from "./home/ProductsPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 // Import the functions you need from the SDKs you need
 import { getAnalytics, logEvent } from "firebase/analytics";
@@ -83,13 +85,14 @@ function App() {
         >
           <Router basename="/">
           <FirebaseAnalytics />
+          <ScrollToTop />
             <Routes>
-              FirebaseAnalytics<Route path="/" element={<Home to="/Home" />} />
+              <Route path="/" element={<Home to="/Home" />} />
               <Route path="/blog" element={<BlogLanding to="/blog" />} />
               <Route path="/blog/:slug" element={<BlogPostPage to="/blog/:slug" />} />
-              {/* <Route path="/MileTracker/privacyPolicy" element={<MileTracker to="/MileTracker" />} />
-              <Route path="/contact" element={<Contact to="/Contact" />} /> */}
-              <Route path="/MileTracker" element={<MileTracker to="/MileTracker" />} />
+              <Route path="/Contact" element={<ContactPage to="/Contact" />} />
+              <Route path="/Products" element={<ProductsPage to="/Products" />} />
+              <Route path="/Products/:productName" element={<ProductsPage to="/Products/:productName" />} />
               {/* <Route component={Error} /> */}
             </Routes>
           </Router>

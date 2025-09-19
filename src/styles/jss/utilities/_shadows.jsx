@@ -3,7 +3,7 @@ import React from "react";
 
 const generateShadows = (theme) => {
   let classList = {};
-  theme.shadows.map((shadow, ind) => {
+  theme.shadows.forEach((shadow, ind) => {
     classList[`.elevation-z${ind}`] = {
       boxShadow: `${shadow} !important`,
     };

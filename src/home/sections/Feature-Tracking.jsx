@@ -1,4 +1,4 @@
-import { Grid, Icon, lighten, useMediaQuery } from "@mui/material";
+import { Grid, Icon, useMediaQuery } from "@mui/material";
 import { makeStyles } from '@mui/styles';
 import React from "react";
 
@@ -64,21 +64,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-  buttonGroupBG: {
-    background: lighten(theme.palette.primary.light, 0.9),
-    "&>div": {
-      transition: "all 250ms",
-      "&:hover": {
-        background: theme.palette.primary.main,
-        color: theme.palette.primary.contrastText,
-        borderRadius: 8,
-      },
-      [theme.breakpoints.down("sm")]: {
-        textAlign: "center",
-        width: "100%",
-      },
-    },
-  },
 }));
 
 const features = [
@@ -105,15 +90,6 @@ const FeatureTracking = () => {
               </p>
             </div>
 
-            <div className="mb-16 inline-block">
-              <div
-                className={`flex flex-wrap items-center border-radius-8 ${classes.buttonGroupBG}`}
-              >
-                <div className="px-6 py-2 box-shadow-none">Walking</div>
-                <div className="px-6 py-2 box-shadow-none">Cycling</div>
-                <div className="px-6 py-2 box-shadow-none">Driving</div>
-              </div>
-            </div>
 
             <div>
               <h1 className="mt-0 font-normal text-44">

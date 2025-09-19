@@ -66,13 +66,18 @@ const TopBar11 = (props) => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/MileTracker">
+            <NavLink to="/Products">
               Products
             </NavLink>
           </li>
           <li>
             <NavLink to="/blog">
               Blog
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/Contact">
+              Contact
             </NavLink>
           </li>
         </ul>
