@@ -138,7 +138,7 @@ const Intro8 = () => {
             >
               <div className="relative">
                 <img
-                  src="/assets/images/home_header.jpeg"
+                  src="/assets/images/home_header.png"
                   alt="Christopher Moore - Expert Software Developer and Tech Enthusiast with 10+ years experience"
                   className="w-full block"
                   loading="lazy"
