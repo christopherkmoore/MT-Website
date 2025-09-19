@@ -263,7 +263,7 @@ const Contact = () => {
             <div className={classes.leftSection}>
               <div className={classes.profileContainer}>
                 <img
-                  src="/assets/images/profile.jpeg"
+                  src="/assets/images/home_header.jpeg"
                   alt="Christopher Moore - Professional Software Developer and Tech Expert"
                   className={classes.profileImage}
                   loading="lazy"
