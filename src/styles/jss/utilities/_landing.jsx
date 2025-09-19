@@ -4,8 +4,8 @@ import { GlobalStyles } from "@mui/material";
 export const landingStyles = (
   <GlobalStyles
     styles={({ palette, ...theme }) => ({
-        ".landing": { color: "rgba(0, 0, 0, 0.87)", overflow: "hidden" },
-        ".landing p": { color: "rgba(var(--body), 0.74)" },
+        ".landing": { color: "#e2e8f0", overflow: "hidden" },
+        ".landing p": { color: "#cbd5e1", lineHeight: "1.6" },
         ".landing a": { textDecoration: "none" },
         ".landing div, .landing section": { boxSizing: "border-box" },
         ".section-intro": { paddingTop: "7.5rem !important" },
@@ -34,7 +34,10 @@ export const landingStyles = (
           position: "fixed",
           width: "100%",
           top: "0",
-          background: "var(--bg-paper)",
+          background: "rgba(30, 41, 59, 0.9) !important",
+          borderBottom: "1px solid rgba(148, 163, 184, 0.3) !important",
+          boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.3) !important",
+          backdropFilter: "blur(10px) !important",
           left: "0",
           right: "0",
           padding: "20px 0",
@@ -43,8 +46,10 @@ export const landingStyles = (
         },
         ".header.header-fixed": {
           padding: "10px 0",
-          background: "#ffffff",
-          boxShadow: "0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28)",
+          background: "rgba(30, 41, 59, 0.95) !important",
+          borderBottom: "1px solid rgba(148, 163, 184, 0.3) !important",
+          boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.4) !important",
+          backdropFilter: "blur(10px) !important",
           zIndex: "999",
         },
         ".header .header-container": {
@@ -66,14 +71,15 @@ export const landingStyles = (
         ".header .header-container ul.navigation li a": {
           display: "flex",
           alignItems: "center",
-          color: "rgba(0, 0, 0, 0.87)",
+          color: "#e2e8f0 !important",
           padding: "8px 15px",
-          fontWeight: "700",
-          borderRadius: "4px",
+          fontWeight: "600",
+          borderRadius: "8px",
           transition: "all 0.3s ease-in",
         },
         ".header .header-container ul.navigation li a:hover": {
-          background: "#f0f0f0",
+          background: "rgba(59, 130, 246, 0.2) !important",
+          color: "#3b82f6 !important",
         },
         ".header .header-container .header__toggle": { display: "none" },
         "@media only screen and (max-width: 767px)": {

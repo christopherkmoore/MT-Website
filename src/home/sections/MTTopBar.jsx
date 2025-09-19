@@ -1,9 +1,20 @@
 import { Icon, IconButton } from "@mui/material";
+import { makeStyles } from '@mui/styles';
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { classList, debounce } from "../../utils";
 
+const useStyles = makeStyles(({ palette, ...theme }) => ({
+  brandName: {
+    color: '#e2e8f0',
+    fontWeight: '700',
+    fontSize: '1.5rem',
+    textDecoration: 'none',
+  },
+}));
+
 const TopBar11 = (props) => {
+  const classes = useStyles();
   const [isTop, setIsTop] = useState(true);
   const [isClosed, setIsClosed] = useState(true);
 
@@ -44,10 +55,9 @@ const TopBar11 = (props) => {
     >
       <div className="container header-container ">
         <div className="brand">
-          <NavLink to="/">
+          <NavLink to="/" className={classes.brandName}>
             Christopher Moore
           </NavLink>
-
         </div>
         <ul className="navigation">
           <li>
@@ -72,6 +82,7 @@ const TopBar11 = (props) => {
           onClick={() => {
             setIsClosed(!isClosed);
           }}
+          style={{ color: '#e2e8f0' }}
         >
           <Icon>{toggleIcon}</Icon>
         </IconButton>

@@ -6,34 +6,43 @@ import { NavLink } from "react-router-dom";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   projectCard: {
-    background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    background: 'rgba(30, 41, 59, 0.7)',
+    backdropFilter: 'blur(10px)',
+    border: '1px solid rgba(148, 163, 184, 0.2)',
     borderRadius: 16,
     padding: "2rem",
     marginBottom: "3rem",
-    boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
-    "&:nth-child(even)": {
-      background: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+    boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2)',
+    transition: 'all 0.3s ease',
+    '&:hover': {
+      boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3)',
+      transform: 'translateY(-2px)',
     },
   },
   projectTitle: {
-    color: "white",
-    fontWeight: "bold",
+    color: "#e2e8f0",
+    fontWeight: "700",
+    fontSize: '2rem',
     marginBottom: "0.5rem",
   },
   projectDescription: {
-    color: "rgba(255,255,255,0.9)",
+    color: "#cbd5e1",
+    lineHeight: '1.6',
     marginBottom: "2rem",
   },
   cardHolder: {
     position: "relative",
     borderRadius: 12,
     overflow: "hidden",
-    boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
+    background: 'rgba(30, 41, 59, 0.6)',
+    backdropFilter: 'blur(10px)',
+    border: '1px solid rgba(148, 163, 184, 0.2)',
+    boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2)',
     transition: "transform 0.3s ease, box-shadow 0.3s ease",
     height: 280,
     "&:hover": {
-      transform: "translateY(-5px)",
-      boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
+      transform: "translateY(-3px)",
+      boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
       "& $cardOverlay": {
         opacity: 1,
       },
@@ -43,12 +52,15 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     position: "relative",
     borderRadius: 12,
     overflow: "hidden",
-    boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
+    background: 'rgba(30, 41, 59, 0.6)',
+    backdropFilter: 'blur(10px)',
+    border: '1px solid rgba(148, 163, 184, 0.2)',
+    boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2)',
     transition: "transform 0.3s ease, box-shadow 0.3s ease",
     height: 400,
     "&:hover": {
-      transform: "translateY(-5px)",
-      boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
+      transform: "translateY(-3px)",
+      boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
       "& $cardOverlay": {
         opacity: 1,
       },
@@ -73,8 +85,8 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     left: 0,
     right: 0,
     opacity: 0,
-    color: palette.primary.contrastText,
-    background: "linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 100%)",
+    color: '#ffffff',
+    background: "linear-gradient(to top, rgba(30, 41, 59, 0.9) 0%, rgba(30, 41, 59, 0.6) 50%, transparent 100%)",
     zIndex: 5,
   },
   buttonContainer: {
@@ -83,15 +95,18 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     marginTop: "2rem",
   },
   projectButton: {
-    borderRadius: 25,
+    background: 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)',
+    border: 'none',
+    borderRadius: '8px',
+    color: '#ffffff',
+    fontWeight: '600',
     padding: "12px 30px",
-    background: "rgba(255,255,255,0.2)",
-    color: "white",
-    backdropFilter: "blur(10px)",
-    border: "1px solid rgba(255,255,255,0.3)",
+    boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+    transition: 'all 0.3s ease',
     "&:hover": {
-      background: "rgba(255,255,255,0.3)",
-      transform: "translateY(-2px)",
+      background: 'linear-gradient(135deg, #2563eb 0%, #1e40af 100%)',
+      boxShadow: '0 4px 12px rgba(59, 130, 246, 0.4)',
+      transform: "translateY(-1px)",
     },
   },
 }));
@@ -136,11 +151,7 @@ const Gallery1 = () => {
   ];
 
   const renderProjectSection = (title, description, images, buttonText, buttonLink, isEven, useLargeCards = false) => (
-    <Card className={classes.projectCard} style={{
-      background: isEven
-        ? "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
-        : "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
-    }}>
+    <Card className={classes.projectCard}>
       <CardContent>
         <h2 className={classes.projectTitle}>{title}</h2>
         <p className={classes.projectDescription}>{description}</p>

@@ -10,6 +10,10 @@ import Services1 from "./sections/Services1";
 const Home = () => {
   return (
     <div className="landing">
+      {/* Palm tree decorative elements */}
+      <div className="palm-tree palm-tree-left">🌴</div>
+      <div className="palm-tree palm-tree-right">🌴</div>
+
       <MTTopBar />
       <Intro8 />
       {/* <Intro9 />     if I had a better image maybe this would be nice. */}
