@@ -106,7 +106,7 @@ function App() {
           <FirebaseAnalytics />
           <ScrollToTop />
             <Routes>
-              <Route path="/" element={<Home to="/Home" />} />
+              <Route path="/" element={<Home />} />
               <Route path="/blog" element={<BlogLanding to="/blog" />} />
               <Route path="/blog/:slug" element={<BlogPostPage to="/blog/:slug" />} />
               <Route path="/Contact" element={<ContactPage to="/Contact" />} />

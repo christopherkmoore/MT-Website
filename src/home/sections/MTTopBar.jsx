@@ -138,7 +138,7 @@ const TopBar11 = (props) => {
   };
 
   const navigationItems = [
-    { text: "Home", path: "/" },
+    { text: "Home", path: "/", external: true },
     { text: "Products", path: "/Products" },
     { text: "Blog", path: "/blog" },
     { text: "Contact", path: "/Contact" },
@@ -157,13 +157,23 @@ const TopBar11 = (props) => {
       <List>
         {navigationItems.map((item) => (
           <ListItem key={item.text} onClick={handleDrawerToggle}>
-            <NavLink
-              to={item.path}
-              className={classes.drawerNavLink}
-              onClick={() => advancedAnalytics.trackButtonClick(`nav_${item.text.toLowerCase()}`, 'topbar_mobile')}
-            >
-              <ListItemText primary={item.text} />
-            </NavLink>
+            {item.external ? (
+              <a
+                href={item.path}
+                className={classes.drawerNavLink}
+                onClick={() => advancedAnalytics.trackButtonClick(`nav_${item.text.toLowerCase()}`, 'topbar_mobile')}
+              >
+                <ListItemText primary={item.text} />
+              </a>
+            ) : (
+              <NavLink
+                to={item.path}
+                className={classes.drawerNavLink}
+                onClick={() => advancedAnalytics.trackButtonClick(`nav_${item.text.toLowerCase()}`, 'topbar_mobile')}
+              >
+                <ListItemText primary={item.text} />
+              </NavLink>
+            )}
           </ListItem>
         ))}
       </List>
@@ -175,21 +185,32 @@ const TopBar11 = (props) => {
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
           <Typography variant="h6" component="div">
-            <NavLink to="/" className={classes.brandName}>
+            <a href="/" className={classes.brandName}>
               Christopher Moore
-            </NavLink>
+            </a>
           </Typography>
 
           <nav className={classes.desktopNav}>
             {navigationItems.map((item) => (
-              <NavLink
-                key={item.text}
-                to={item.path}
-                className={classes.navLink}
-                onClick={() => advancedAnalytics.trackButtonClick(`nav_${item.text.toLowerCase()}`, 'topbar_desktop')}
-              >
-                {item.text}
-              </NavLink>
+              item.external ? (
+                <a
+                  key={item.text}
+                  href={item.path}
+                  className={classes.navLink}
+                  onClick={() => advancedAnalytics.trackButtonClick(`nav_${item.text.toLowerCase()}`, 'topbar_desktop')}
+                >
+                  {item.text}
+                </a>
+              ) : (
+                <NavLink
+                  key={item.text}
+                  to={item.path}
+                  className={classes.navLink}
+                  onClick={() => advancedAnalytics.trackButtonClick(`nav_${item.text.toLowerCase()}`, 'topbar_desktop')}
+                >
+                  {item.text}
+                </NavLink>
+              )
             ))}
           </nav>
 
