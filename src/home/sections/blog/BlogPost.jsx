@@ -11,6 +11,19 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     overflowX: "clip",
     overflowY: "clip"
   },
+  blogImage: {
+    width: "100%",
+    maxWidth: "800px",
+    height: "auto",
+    objectFit: "cover",
+    borderRadius: "8px",
+    [theme.breakpoints.down("md")]: {
+      maxWidth: "100%",
+    },
+    [theme.breakpoints.down("sm")]: {
+      borderRadius: "4px",
+    },
+  },
 }));
 
 const getResource = async (filepath) => {
@@ -44,7 +57,7 @@ const BlogPost = ({ post }) => {
           {/*  keywords for tags */}
           <div className="text-center">
             <div className={classes.introWrapper}>
-              <img src={post.imageHeadline} alt="empty"></img>
+              <img src={post.imageHeadline} alt="Blog post header" className={classes.blogImage}></img>
             </div>
 
             <br></br>

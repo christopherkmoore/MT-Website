@@ -16,7 +16,11 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     minHeight: '70vh',
     [theme.breakpoints.down('md')]: {
       flexDirection: 'column',
-      textAlign: 'center',
+      minHeight: 'auto',
+      gap: '2rem',
+    },
+    [theme.breakpoints.down('sm')]: {
+      gap: '1.5rem',
     },
   },
   leftSection: {
@@ -92,6 +96,10 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     [theme.breakpoints.down('md')]: {
       fontSize: '2rem',
     },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.75rem',
+      marginBottom: '0.75rem',
+    },
   },
   subtitle: {
     color: '#94a3b8',
@@ -115,7 +123,12 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     cursor: 'pointer',
     textDecoration: 'none',
     [theme.breakpoints.down('md')]: {
-      justifyContent: 'center',
+      justifyContent: 'flex-start',
+      padding: '1rem',
+    },
+    [theme.breakpoints.down('sm')]: {
+      padding: '0.75rem',
+      marginBottom: '0.75rem',
     },
     '&:hover': {
       background: 'rgba(30, 41, 59, 0.7)',
@@ -138,6 +151,16 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    [theme.breakpoints.down('md')]: {
+      marginRight: '1rem',
+      fontSize: '2.25rem',
+      minWidth: '2.25rem',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '2rem',
+      minWidth: '2rem',
+      marginRight: '0.75rem',
+    },
   },
   emailIcon: {
     color: '#60a5fa',

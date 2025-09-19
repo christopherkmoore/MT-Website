@@ -19,6 +19,12 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '2.5rem',
     marginBottom: '1.5rem',
     lineHeight: '1.2',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '2rem',
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '1.75rem',
+    },
   },
   description: {
     color: '#94a3b8',
@@ -103,9 +109,11 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   featuresImage: {
-    width: '362px',
-    [theme.breakpoints.down('xs')]: {
-      width: '100%',
+    width: '100%',
+    maxWidth: '362px',
+    height: 'auto',
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: '100%',
     },
   },
   highlight: {

@@ -138,9 +138,19 @@ const Intro8 = () => {
             >
               <div className="relative">
                 <img
-                  src="/assets/images/app1.png"
-                  alt="Laptop"
-                  className="w-full block mt-6"
+                  src="/assets/images/profile.jpeg"
+                  alt="Christopher Moore"
+                  className="w-full block"
+                  style={{
+                    borderRadius: '50%',
+                    aspectRatio: '1/1',
+                    objectFit: 'cover',
+                    maxWidth: '400px',
+                    margin: '-0.125rem 0 0 -0.16rem',
+                    border: '4px solid rgba(59, 130, 246, 0.3)',
+                    boxShadow: '0 20px 40px rgba(0, 0, 0, 0.3)',
+                    transition: 'all 0.3s ease'
+                  }}
                 />
                 {/* <div className="price flex items-center justify-center bg-paper">
                   <h4 className="text-18 font-normal m-0">$ 499.99</h4>
@@ -153,10 +163,10 @@ const Intro8 = () => {
               Christopher Moore
             </h1>
             <h4 className={`font-normal text-20 m-0 ${classes.heroSubtitle}`}>
-              Expert Mobile Developer and Tech Enthusiast.
+              Expert Developer and Tech Enthusiast.
             </h4>
             <p className={`my-8 max-w-400 ${classes.heroText}`}>
-              With years of experience in developing innovative mobile apps,
+              With 10+ years of experience in developing software,
               I bring a unique blend of creativity, technical expertise, and passion
               to every project I undertake. My specialties include mobile app design, development,
               and deployment on mobile platforms.

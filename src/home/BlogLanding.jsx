@@ -1,4 +1,5 @@
 import React from "react";
+import { Toolbar } from "@mui/material";
 import Footer2 from "./sections/Footer2";
 
 import BlogGallery from "./sections/blog/BlogGallery";
@@ -9,6 +10,7 @@ const BlogLanding = () => {
   return (
     <div className="landing">
       <MTTopBar />
+      <Toolbar />
       <BlogGallery />
       <CallToAction1 />
       <Footer2 />

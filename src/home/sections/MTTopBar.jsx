@@ -1,98 +1,217 @@
-import { Icon, IconButton } from "@mui/material";
+import { AppBar, Toolbar, Typography, IconButton, Drawer, List, ListItem, ListItemText, useMediaQuery } from "@mui/material";
 import { makeStyles } from '@mui/styles';
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { classList, debounce } from "../../utils";
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
+  appBar: {
+    background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%)',
+    backdropFilter: 'blur(20px)',
+    borderBottom: '1px solid rgba(59, 130, 246, 0.3)',
+    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)',
+    transition: 'all 0.3s ease',
+  },
+  toolbar: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: '0.5rem 2rem',
+    minHeight: '80px',
+    gap: '4rem',
+    [theme.breakpoints.down('md')]: {
+      justifyContent: 'space-between',
+      padding: '0.5rem 1rem',
+      minHeight: '70px',
+      gap: '0',
+    },
+  },
   brandName: {
-    color: '#e2e8f0',
-    fontWeight: '700',
-    fontSize: '1.5rem',
+    color: '#ffffff',
+    fontWeight: '800',
+    fontSize: '1.75rem',
     textDecoration: 'none',
+    flexGrow: 0,
+    letterSpacing: '-0.025em',
+    transition: 'all 0.3s ease',
+    '&:hover': {
+      transform: 'scale(1.05)',
+    },
+    [theme.breakpoints.down('md')]: {
+      fontSize: '1.5rem',
+    },
+  },
+  desktopNav: {
+    display: 'flex',
+    gap: '3rem',
+    alignItems: 'center',
+    [theme.breakpoints.down('md')]: {
+      display: 'none',
+    },
+  },
+  navLink: {
+    color: '#e2e8f0',
+    textDecoration: 'none',
+    fontWeight: '600',
+    padding: '0.75rem 1.5rem',
+    borderRadius: '8px',
+    position: 'relative',
+    transition: 'all 0.3s ease',
+    fontSize: '1rem',
+    '&:hover': {
+      color: '#60a5fa',
+      background: 'rgba(96, 165, 250, 0.1)',
+      transform: 'translateY(-2px)',
+      boxShadow: '0 4px 12px rgba(96, 165, 250, 0.2)',
+    },
+    '&.active': {
+      color: '#60a5fa',
+      background: 'rgba(96, 165, 250, 0.15)',
+      '&::after': {
+        content: '""',
+        position: 'absolute',
+        bottom: '4px',
+        left: '50%',
+        transform: 'translateX(-50%)',
+        width: '6px',
+        height: '6px',
+        borderRadius: '50%',
+        background: '#60a5fa',
+      },
+    },
+  },
+  menuButton: {
+    color: '#e2e8f0',
+    background: 'rgba(96, 165, 250, 0.1)',
+    border: '1px solid rgba(96, 165, 250, 0.3)',
+    borderRadius: '8px',
+    padding: '8px',
+    transition: 'all 0.3s ease',
+    display: 'block',
+    '&:hover': {
+      background: 'rgba(96, 165, 250, 0.2)',
+      color: '#60a5fa',
+      transform: 'scale(1.05)',
+    },
+    [theme.breakpoints.up('md')]: {
+      display: 'none !important',
+    },
+    [theme.breakpoints.down('md')]: {
+      display: 'block !important',
+    },
+  },
+  drawer: {
+    '& .MuiDrawer-paper': {
+      backgroundColor: 'rgba(15, 23, 42, 0.98)',
+      color: '#e2e8f0',
+      width: 250,
+    },
+  },
+  drawerHeader: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: '1rem',
+    borderBottom: '1px solid rgba(148, 163, 184, 0.2)',
+  },
+  drawerNavLink: {
+    color: '#e2e8f0',
+    textDecoration: 'none',
+    fontWeight: '500',
+    '&:hover': {
+      color: '#60a5fa',
+    },
+    '&.active': {
+      color: '#60a5fa',
+    },
   },
 }));
 
 const TopBar11 = (props) => {
   const classes = useStyles();
-  const [isTop, setIsTop] = useState(true);
-  const [isClosed, setIsClosed] = useState(true);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const isMobile = useMediaQuery((theme) => theme.breakpoints.down('md'));
 
-  let scrollableElement = document.querySelector(".scrollable-content");
-  if (!scrollableElement) scrollableElement = window;
-
-  let handleScrollRef = null;
-  let toggleIcon = isClosed ? "menu" : "close";
-
-  const handleScroll = () => {
-    return debounce(({ target: { scrollTop } }) => {
-      let isCurrentTop = scrollTop < 100 || scrollableElement.scrollY < 100;
-      setIsTop(isCurrentTop);
-    }, 20);
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
   };
 
-  handleScrollRef = handleScroll();
+  const navigationItems = [
+    { text: "Home", path: "/" },
+    { text: "Products", path: "/Products" },
+    { text: "Blog", path: "/blog" },
+    { text: "Contact", path: "/Contact" },
+  ];
 
-  useEffect(() => {
-    if (scrollableElement) {
-      scrollableElement.addEventListener("scroll", handleScrollRef);
-    }
-
-    return () => {
-      if (scrollableElement) {
-        scrollableElement.removeEventListener("scroll", handleScrollRef);
-      }
-    };
-  }, [scrollableElement, handleScrollRef]);
-
-  return (
-    <section
-      className={classList({
-        header: true,
-        "header-fixed": !isTop,
-        closed: isClosed,
-      })}
-    >
-      <div className="container header-container ">
-        <div className="brand">
-          <NavLink to="/" className={classes.brandName}>
-            Christopher Moore
-          </NavLink>
-        </div>
-        <ul className="navigation">
-          <li>
-            <NavLink to="/">
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/Products">
-              Products
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/blog">
-              Blog
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/Contact">
-              Contact
-            </NavLink>
-          </li>
-        </ul>
-        <div className="m-auto" />
-        <IconButton
-          className="header__toggle"
-          onClick={() => {
-            setIsClosed(!isClosed);
-          }}
-          style={{ color: '#e2e8f0' }}
-        >
-          <Icon>{toggleIcon}</Icon>
+  const drawer = (
+    <div>
+      <div className={classes.drawerHeader}>
+        <Typography variant="h6" className={classes.brandName}>
+          Christopher Moore
+        </Typography>
+        <IconButton onClick={handleDrawerToggle} className={classes.menuButton}>
+          <CloseIcon />
         </IconButton>
       </div>
-    </section>
+      <List>
+        {navigationItems.map((item) => (
+          <ListItem key={item.text} onClick={handleDrawerToggle}>
+            <NavLink to={item.path} className={classes.drawerNavLink}>
+              <ListItemText primary={item.text} />
+            </NavLink>
+          </ListItem>
+        ))}
+      </List>
+    </div>
+  );
+
+  return (
+    <>
+      <AppBar position="fixed" className={classes.appBar}>
+        <Toolbar className={classes.toolbar}>
+          <Typography variant="h6" component="div">
+            <NavLink to="/" className={classes.brandName}>
+              Christopher Moore
+            </NavLink>
+          </Typography>
+
+          <nav className={classes.desktopNav}>
+            {navigationItems.map((item) => (
+              <NavLink
+                key={item.text}
+                to={item.path}
+                className={classes.navLink}
+              >
+                {item.text}
+              </NavLink>
+            ))}
+          </nav>
+
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            className={classes.menuButton}
+          >
+            <MenuIcon />
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+
+      <Drawer
+        variant="temporary"
+        open={mobileOpen}
+        onClose={handleDrawerToggle}
+        ModalProps={{
+          keepMounted: true, // Better open performance on mobile.
+        }}
+        className={classes.drawer}
+      >
+        {drawer}
+      </Drawer>
+    </>
   );
 };
 

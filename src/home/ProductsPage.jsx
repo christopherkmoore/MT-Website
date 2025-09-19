@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ToggleButton, ToggleButtonGroup } from "@mui/material";
+import { ToggleButton, ToggleButtonGroup, Toolbar } from "@mui/material";
 import { makeStyles } from '@mui/styles';
 import { useParams, useNavigate, Navigate } from "react-router-dom";
 
@@ -96,6 +96,7 @@ const ProductsPage = () => {
   return (
     <div className="landing">
       <MTTopBar />
+      <Toolbar />
 
       <div className={classes.toggleContainer}>
         <ToggleButtonGroup

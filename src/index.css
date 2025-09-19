@@ -1,6 +1,9 @@
 html {
   font-size: 16px;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /* Enable smooth scrolling and bounce on iOS */
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -9,14 +12,18 @@ body {
   font-weight: 400;
   font-size: 0.875rem;
   overflow-x: hidden !important;
+  overflow-y: scroll;
   line-height: 1.5;
   letter-spacing: 0.3px;
   font-family: 'Inter', 'Roboto', "Helvetica Neue", sans-serif;
-  overflow: hidden;
+  min-height: 100vh;
 
   /* Dark Professional Background */
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   color: #e2e8f0;
+
+  /* Enable smooth scrolling and bounce on iOS */
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Dark Professional design elements */

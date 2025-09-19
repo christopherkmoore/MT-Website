@@ -10,9 +10,11 @@ const useStyles = makeStyles((theme) => ({
   },
 
   musicImage: {
-    width: "362px",
-    [theme.breakpoints.down("xs")]: {
-      width: "100%",
+    width: "100%",
+    maxWidth: "362px",
+    height: "auto",
+    [theme.breakpoints.down("sm")]: {
+      maxWidth: "100%",
     },
   },
 

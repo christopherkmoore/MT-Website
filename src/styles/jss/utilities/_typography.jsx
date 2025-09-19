@@ -45,16 +45,74 @@ export const typographyStyles = (
       ".text-32": { fontSize: "32px !important" },
       ".text-36": { fontSize: "36px !important" },
       ".text-40": { fontSize: "40px !important" },
-      ".text-44": { fontSize: "44px !important" },
-      ".text-48": { fontSize: "48px !important" },
-      ".text-54": { fontSize: "54px !important" },
-      ".text-58": { fontSize: "58px !important" },
-      ".text-62": { fontSize: "62px !important" },
-      ".text-72": { fontSize: "72px !important" },
+      ".text-44": {
+        fontSize: "44px !important",
+        [theme.breakpoints.down('sm')]: {
+          fontSize: "32px !important"
+        },
+        [theme.breakpoints.down('xs')]: {
+          fontSize: "28px !important"
+        }
+      },
+      ".text-48": {
+        fontSize: "48px !important",
+        [theme.breakpoints.down('sm')]: {
+          fontSize: "36px !important"
+        },
+        [theme.breakpoints.down('xs')]: {
+          fontSize: "30px !important"
+        }
+      },
+      ".text-54": {
+        fontSize: "54px !important",
+        [theme.breakpoints.down('sm')]: {
+          fontSize: "40px !important"
+        },
+        [theme.breakpoints.down('xs')]: {
+          fontSize: "32px !important"
+        }
+      },
+      ".text-58": {
+        fontSize: "58px !important",
+        [theme.breakpoints.down('sm')]: {
+          fontSize: "44px !important"
+        },
+        [theme.breakpoints.down('xs')]: {
+          fontSize: "36px !important"
+        }
+      },
+      ".text-62": {
+        fontSize: "62px !important",
+        [theme.breakpoints.down('sm')]: {
+          fontSize: "48px !important"
+        },
+        [theme.breakpoints.down('xs')]: {
+          fontSize: "40px !important"
+        }
+      },
+      ".text-72": {
+        fontSize: "72px !important",
+        [theme.breakpoints.down('sm')]: {
+          fontSize: "54px !important"
+        },
+        [theme.breakpoints.down('xs')]: {
+          fontSize: "44px !important"
+        }
+      },
       ".text-small": { fontSize: "0.8125rem !important" },
       ".whitespace-pre-wrap": { whiteSpace: "pre-wrap", wordBreak: "break-word" },
       ".whitespace-pre": { whiteSpace: "pre" },
       ".whitespace-no-wrap": { whiteSpace: "nowrap" },
+      ".text-wrap-mobile": {
+        [theme.breakpoints.down('sm')]: {
+          wordBreak: "break-word",
+          hyphens: "auto",
+          lineHeight: "1.3"
+        }
+      },
+      ".line-height-tight": { lineHeight: "1.1 !important" },
+      ".line-height-normal": { lineHeight: "1.4 !important" },
+      ".line-height-loose": { lineHeight: "1.6 !important" },
     })}
   />
 );
