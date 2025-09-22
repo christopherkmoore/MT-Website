@@ -30,6 +30,7 @@ import ContactPage from "./home/ContactPage";
 import Home from "./home/Home";
 import ProductsPage from "./home/ProductsPage";
 import ScrollToTop from "./components/ScrollToTop";
+import NotFound from "./NotFound";
 
 // Import the functions you need from the SDKs you need
 import { getAnalytics } from "firebase/analytics";
@@ -112,7 +113,7 @@ function App() {
               <Route path="/Contact" element={<ContactPage to="/Contact" />} />
               <Route path="/Products" element={<ProductsPage to="/Products" />} />
               <Route path="/Products/:productName" element={<ProductsPage to="/Products/:productName" />} />
-              {/* <Route component={Error} /> */}
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Router>
         </Scrollbar>

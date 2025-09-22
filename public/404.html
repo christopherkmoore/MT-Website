@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0f172a" />
+    <title>404 - Page Not Found | Christopher Moore</title>
+    <meta name="description" content="The page you're looking for doesn't exist. Return to Christopher Moore's portfolio." />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href="https://www.pixelper.com/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.pixelper.com/" />
+    <meta property="og:title" content="404 - Page Not Found | Christopher Moore" />
+    <meta property="og:description" content="The page you're looking for doesn't exist. Return to Christopher Moore's portfolio." />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        color: #e2e8f0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+      }
+
+      .container {
+        text-align: center;
+        max-width: 600px;
+        width: 100%;
+      }
+
+      .error-code {
+        font-size: 8rem;
+        font-weight: 700;
+        color: #3b82f6;
+        margin-bottom: 1rem;
+        text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+      }
+
+      .title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #e2e8f0;
+      }
+
+      .message {
+        font-size: 1.125rem;
+        color: #94a3b8;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+      }
+
+      .home-button {
+        display: inline-block;
+        background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        color: #ffffff;
+        text-decoration: none;
+        padding: 12px 30px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+      }
+
+      .home-button:hover {
+        background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        transform: translateY(-1px);
+      }
+
+      .back-link {
+        display: block;
+        margin-top: 1rem;
+        color: #60a5fa;
+        text-decoration: none;
+        font-size: 0.875rem;
+      }
+
+      .back-link:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        .error-code {
+          font-size: 4rem;
+        }
+
+        .title {
+          font-size: 1.5rem;
+        }
+
+        .message {
+          font-size: 1rem;
+        }
+
+        body {
+          padding: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="error-code">404</div>
+      <h1 class="title">Page Not Found</h1>
+      <p class="message">
+        Sorry, the page you're looking for doesn't exist. It may have been moved, deleted, or you may have mistyped the URL.
+      </p>
+      <a href="https://www.pixelper.com/" class="home-button">
+        Go to Homepage
+      </a>
+      <a href="javascript:history.back()" class="back-link">
+        ← Go back to previous page
+      </a>
+    </div>
+
+    <!-- Analytics for 404 tracking -->
+    <script>
+      // Track 404 page views if Google Analytics is available
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'page_view', {
+          page_title: '404 - Page Not Found',
+          page_location: window.location.href,
+          custom_map: {'dimension1': '404_error'}
+        });
+      }
+    </script>
+  </body>
+</html>
