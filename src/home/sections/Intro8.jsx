@@ -5,7 +5,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 
-const strengths = ["Expert in React, SwiftUI, Jetpack Compose for modern mobile app development",
+const strengths = ["Expert in React, SwiftUI, Jetpack Compose for modern mobile app and web development",
   "Specialized in responsive web design and mobile-first development approaches",
   "Full-stack development with focus on performance optimization and user experience"
 ]
@@ -167,10 +167,10 @@ const Intro8 = () => {
               Expert Developer and Tech Enthusiast.
             </h4>
             <p className={`my-8 max-w-400 ${classes.heroText}`}>
-              With 10+ years of experience in developing innovative software solutions,
-              I specialize in React development, iOS app development, Android app development,
-              and full-stack web development. I bring cutting-edge technical expertise and creative
-              problem-solving to every mobile app and web development project.
+              10+ years of experience in developing innovative software solutions.
+              I specialize in iOS and Android app development, React development 
+              and AWS based Cloud Backends. I bring cutting-edge technical expertise and creative
+              problem-solving to every project.
             </p>
             {strengths.map((item) => (
               <div key={item} className="flex items-center">
