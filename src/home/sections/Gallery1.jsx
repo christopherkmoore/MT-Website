@@ -183,6 +183,24 @@ const Gallery1 = ({ isProductsPage = false }) => {
     },
   ];
 
+  const borderTimesImages = [
+    {
+      title: "Real-time Data",
+      subtitle: "Live border crossing wait times",
+      image: "/assets/images/border-times4.png",
+    },
+    {
+      title: "Mobile Optimized",
+      subtitle: "Responsive design for all devices",
+      image: "/assets/images/border-times1.png",
+    },
+    {
+      title: "Crossing Details",
+      subtitle: "Comprehensive border information",
+      image: "/assets/images/border-times3.png",
+    },
+  ];
+
   const handleProductChange = (event, newProduct) => {
     if (newProduct !== null) {
       setSelectedProduct(newProduct);
@@ -219,6 +237,8 @@ const Gallery1 = ({ isProductsPage = false }) => {
           navigate("/Products/PrivacyOTP");
         } else if (title === "Mile Tracker") {
           navigate("/Products/MileTracker");
+        } else if (title === "Border Times") {
+          navigate("/Products/BorderTimes");
         }
       }
     };
@@ -329,6 +349,16 @@ const Gallery1 = ({ isProductsPage = false }) => {
               "/Products/MileTracker",
               true,
               true
+            )}
+
+            {renderProjectSection(
+              "Border Times",
+              "Real-time US-Mexico border crossing wait times with live data updates every 15 minutes.",
+              borderTimesImages,
+              "READ MORE",
+              "/Products/BorderTimes",
+              false,
+              false
             )}
           </>
         )}

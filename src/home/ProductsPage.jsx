@@ -16,6 +16,11 @@ import PrivacyAnalytics from "./sections/PrivacyAnalytics";
 import FeaturesOTP from "./sections/FeaturesOTP";
 import CallToActionOTP from "./sections/CallToActionOTP";
 
+// Border Times components
+import IntroBT from "./sections/IntroBT";
+import FeaturesBT from "./sections/FeaturesBT";
+import CallToActionBT from "./sections/CallToActionBT";
+
 // Common components
 import Footer2 from "./sections/Footer2";
 import MTTopBar from "./sections/MTTopBar";
@@ -61,6 +66,7 @@ const ProductsPage = () => {
   const getProductKey = (urlParam) => {
     if (urlParam === 'MileTracker') return 'mile-tracker';
     if (urlParam === 'PrivacyOTP') return 'privacy-otp';
+    if (urlParam === 'BorderTimes') return 'border-times';
     return 'mile-tracker'; // default
   };
 
@@ -68,6 +74,7 @@ const ProductsPage = () => {
   const getUrlParam = (productKey) => {
     if (productKey === 'mile-tracker') return 'MileTracker';
     if (productKey === 'privacy-otp') return 'PrivacyOTP';
+    if (productKey === 'border-times') return 'BorderTimes';
     return 'MileTracker'; // default
   };
 
@@ -111,6 +118,9 @@ const ProductsPage = () => {
           <ToggleButton value="privacy-otp" className={classes.toggleButton}>
             Privacy OTP
           </ToggleButton>
+          <ToggleButton value="border-times" className={classes.toggleButton}>
+            Border Times
+          </ToggleButton>
         </ToggleButtonGroup>
       </div>
 
@@ -122,12 +132,18 @@ const ProductsPage = () => {
           <Feature5 />
           <CallToAction3 />
         </>
-      ) : (
+      ) : selectedProduct === 'privacy-otp' ? (
         <>
           <IntroOTP />
           <PrivacyAnalytics />
           <FeaturesOTP />
           <CallToActionOTP />
+        </>
+      ) : (
+        <>
+          <IntroBT />
+          <FeaturesBT />
+          <CallToActionBT />
         </>
       )}
 
