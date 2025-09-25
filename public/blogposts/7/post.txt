@@ -1,0 +1,44 @@
+# They say the best business ideas start with solving a personal problem!
+
+That problem started when I met my wife.
+
+I started making regular trips across the US-Mexico border. What began as romantic visits quickly became a logistical nightmare that millions of people face but rarely talk about.
+
+If you've ever tried to plan a border crossing, you know the frustration. You search online, find the CBP website, and get... essentially nothing useful. "2-4 hour wait times" with no context about when, where, or why. No historical data. No predictive insights. No granularity.
+
+I was making important life decisions based on information that felt like it came from a Magic 8-Ball.
+
+## The "Aha" Moment
+
+Standing in yet another unexpectedly long line, watching people miss flights and appointments, I realized something: this isn't just my problem. Thousands of people cross these borders daily for work, family, business, and life. We're all operating in the dark.
+
+That's when it hit me - whoever could crack this code wouldn't just be solving a logistics problem. They'd be giving people their time back. Their stress levels would drop. Their planning would improve. They'd have dedicated users for life.
+
+## Building What I Actually Needed
+
+Today marks the official launch of [border-times.com](https://border-times.com), and I'll be honest - I'm nervous and excited in equal measure. This represents months of work creating something I genuinely use every single week.
+
+The goal was simple: build the most accurate, user-friendly border crossing resource that actually exists. No more guessing. No more "plan for the worst and hope for the best." Just real, actionable data you can plan your life around.
+
+## What's Next
+
+This is phase one. The vision extends far beyond a website - mobile apps with push notifications, predictive modeling based on historical patterns, primary source verification, and real-time updates that actually reflect reality.
+
+But right now, I'm focused on one thing: making sure this solves the actual problem for real people.
+
+## I Want to Hear From You
+
+Here's what I'm really curious about:
+
+* How do you currently handle border crossing planning?
+* What's your worst "I didn't expect this delay" story?
+* Have you found any tools that actually work?
+* What would make this kind of service indispensable for you?
+
+Building in isolation is a recipe for irrelevance. The best insights come from people living this experience daily.
+
+Reach out through the contact form on [border-times.com](https://border-times.com), or find me on social media. Whether you're crossing weekly or once a year, I want to understand how to make this resource genuinely useful for your specific situation.
+
+Sometimes the best products come from the most personal frustrations. Here's hoping this one saves you some time and stress next time you're planning a trip south.
+
+Find my personal information and work at [pixelper.com](https://pixelper.com).

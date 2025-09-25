@@ -1,6 +1,21 @@
 
 [
 {
+    "imageUrl": "./blogposts/7/thumbnail.jpg",
+    "fileUrl": "./blogposts/7/post.txt",
+    "mediumUrl": "https://medium.com/@christopherkmoore/they-say-the-best-business-ideas-start-with-solving-a-personal-problem-0850f104649f",
+    "imageHeadline": "./blogposts/7/banner.jpg",
+    "dateMonth": "Sep",
+    "dateDay": "25",
+    "dateYear": "2025",
+    "date": "September 25, 2025",
+    "readTime": "4 min",
+    "title": "They say the best business ideas start with solving a personal problem!",
+    "subSeriesTitle": "Building a Small-Scale Online Business",
+    "urlSlug": "border-times-launch",
+    "details": "From border crossing frustrations to launching border-times.com - how personal problems become business solutions."
+    },
+{
     "imageUrl": "./blogposts/6/image.jpg",
     "fileUrl": "./blogposts/6/post.txt",
     "imageHeadline": "./blogposts/6/image.jpg",
