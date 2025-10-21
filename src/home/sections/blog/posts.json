@@ -1,6 +1,21 @@
 
 [
 {
+    "imageUrl": "./blogposts/8/thumbnail.jpg",
+    "fileUrl": "./blogposts/8/post.txt",
+    "mediumUrl": "https://medium.com/@christopherkmoore/we-built-an-app-because-waiting-at-the-border-really-really-sucks-23376c7970de",
+    "imageHeadline": "./blogposts/8/banner.jpg",
+    "dateMonth": "Oct",
+    "dateDay": "18",
+    "dateYear": "2025",
+    "date": "October 18, 2025",
+    "readTime": "5 min",
+    "title": "Border Times iOS App Now Available",
+    "subSeriesTitle": "Building a Small-Scale Online Business",
+    "urlSlug": "border-times-ios-launch",
+    "details": "We built an app because waiting at the border really sucks. Download Border Times on iOS and join thousands of border crossers saving time and sanity."
+    },
+{
     "imageUrl": "./blogposts/7/thumbnail.jpg",
     "fileUrl": "./blogposts/7/post.txt",
     "mediumUrl": "https://medium.com/@christopherkmoore/they-say-the-best-business-ideas-start-with-solving-a-personal-problem-0850f104649f",

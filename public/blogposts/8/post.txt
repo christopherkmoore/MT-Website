@@ -1,0 +1,80 @@
+# We Built an App Because Waiting at the Border Really, Really Sucks
+
+**So here's the thing:** I've lost count of how many hours I've spent sitting at the border, watching my phone, watching the clock, wondering if I should've left an hour earlier. Or later. Or just stayed home.
+
+You know that feeling, right? You're in line at San Ysidro or Otay Mesa, and you have no idea if you're about to wait 20 minutes or two hours. You see someone zip through the SENTRI lane while you're stuck in standard, and you wonder if today was the day you should've tried a different crossing. Maybe Tecate would've been faster? Who knows.
+
+Nobody knows. And that's the problem.
+
+## The "Oh God, Not Again" Moment
+
+The idea for Border Times came from one of those days where everything goes wrong. You know the ones – you leave early for an important meeting, you check the official wait time website (it says 45 minutes), and you think "okay, I've got this."
+
+Two and a half hours later, you're still in line, sweating through your shirt, apologizing over the phone, and wondering what you did in a past life to deserve this.
+
+The CBP estimates? They're fine, but they're just estimates. They don't tell you that the Ready Lane is moving twice as fast today, or that there was an incident that shut down two lanes an hour ago, or that literally everyone in Tijuana decided to cross at the exact same time as you.
+
+We needed something better. Something smarter. Something that actually *knew* what was happening right now.
+
+## Building Something That Actually Helps
+
+So we built Border Times.
+
+Not as some big corporate thing – just as a tool we desperately needed and figured maybe you needed too. It pulls official CBP data, sure, but it also learns from real people actually crossing right now. It uses AI to spot patterns (like how Sundays at 4 PM are consistently terrible at San Ysidro, or how Wednesday mornings at Otay Mesa are surprisingly chill).
+
+And here's the cool part: the app gets smarter every time someone uses it. When you record your crossing (totally anonymous, we're not creeps), you're helping the next person make a better decision. It's like leaving breadcrumbs for everyone else stuck in the same situation.
+
+## How It Actually Works (Without the BS)
+
+Open the app. See the wait times. Pick your crossing and lane. That's it.
+
+Want to help make the data better for everyone? Let the app track your crossing. It's all encrypted and anonymous – we literally can't tell who you are even if we wanted to. In return, you get premium features like detailed historical data and trends.
+
+## Who This Is For (Probably You)
+
+If you cross the border with any regularity, this app is for you:
+
+* You drive to work in San Diego and live in Tijuana
+* You visit family in Mexicali every weekend
+* You make business trips to El Paso
+* You have SENTRI but still want to know if it's worth the drive today
+* You're planning a vacation and want to time your crossing right
+
+Basically, if you've ever sat in a border line thinking "there has to be a better way," hi. We made this for you.
+
+## Give Back, Get Back
+
+Border Times works because we all help each other out. Do something nice for the people beside you in line, and be rewarded. Every time you submit your crossing, you're granted access to everyone else's data. It's not about paying us – it's about contributing to something bigger than yourself.
+
+Share your crossing anonymously, and you unlock premium features. Each trip earns you 5 days of enhanced access, stackable up to 30 days. The more you help the community, the more the community helps you back.
+
+Think of it as paying it forward, except you also get something awesome in return.
+
+## Download It, Try It, Tell Us What You Think
+
+**[Get Border Times on the App Store →](https://apps.apple.com/us/app/border-times/id6753611647)**
+
+Is it perfect? No. Will it save you from every bad crossing experience? Probably not. But saving two hours a week? Avoiding the Saturday afternoon nightmare at San Ysidro? Not losing your mind wondering if you should've left earlier? Your sanity is worth saving.
+
+We're working on an Android version (I know, I know, we should've done both at once). We're adding more features. We're making the AI smarter. We're listening to feedback.
+
+But for now, we just wanted to get this in your hands and see if it helps you as much as it's helped us.
+
+## Real Talk: Thank You
+
+To everyone who tested this thing when it was buggy and weird – thank you. To the people who gave us feedback that made us completely rethink features – thank you. To anyone who downloads this and gives it a shot – thank you.
+
+We made this because we needed it. We're sharing it because we think you need it too.
+
+Now go download it and stop wasting time at the border. You've got better things to do.
+
+**See you at the crossing,**
+*The Border Times Team*
+
+---
+
+**P.S.** – Got feedback? Found a bug? Have an idea that would make this better? Submit feature requests at [border-times.com/en/feature-requests](https://border-times.com/en/feature-requests) or email us at support@border-times.com. We actually read everything. All of it. Even the snarky ones (but please be nice).
+
+---
+
+*Border Times is on the [App Store](https://apps.apple.com/us/app/border-times/id6753611647). Real wait times for San Ysidro, Otay Mesa, Calexico, El Paso, Laredo, Nogales, and more. Because your sanity is worth saving.*

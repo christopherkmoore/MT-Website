@@ -26,6 +26,27 @@ export function MarkdownRenderer({ children: markdown }) {
             </code>
           );
         },
+        a({ node, children, ...props }) {
+          return (
+            <a
+              {...props}
+              style={{
+                color: '#1976d2',
+                textDecoration: 'underline',
+                fontWeight: 500,
+                transition: 'color 0.2s ease',
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.color = '#1565c0';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.color = '#1976d2';
+              }}
+            >
+              {children}
+            </a>
+          );
+        },
       }}
     >
       {markdown}
